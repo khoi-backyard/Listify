@@ -1,0 +1,107 @@
+fastlane_version "2.20.0"
+
+default_platform :ios
+
+platform :ios do
+
+  before_all do
+
+  end
+
+  
+
+  desc "Submit build to crashlytics"
+  lane :beta do
+    
+    project_path = "Simple\ Todo.xcodeproj"
+
+    notes = last_git_commit[:message]
+    cocoapods
+
+    new_build_number = generate_build_number
+
+    increment_build_number(
+      build_number: new_build_number
+    )
+
+    match(
+      app_identifier: "io.khoi.Simple-Todo", 
+      type: "adhoc",
+      keychain_password: ENV["MATCH_PASSWORD"],
+      readonly: true
+    )
+
+    gym(scheme: "Simple Todo")
+
+    # Upload the build to Crashlytics.
+    crashlytics(
+      api_token: "7278ab7e44447c45d875ffc250de48bffa5d35e8",
+      build_secret: "432f0055a61cc7eed796413b4239b55ec8dc3bba0298e9c35d6b9361b371d41f",
+      notes: notes,
+      groups: ["beta-testers"]
+    )
+    upload_symbols_to_crashlytics
+
+    clean_build_artifacts
+  end
+
+  lane :add_device do
+      device_name = prompt(text: "Enter the device name: ")
+      device_udid = prompt(text: "Enter the device UDID: ")
+      device_hash = {}
+      device_hash[device_name] = device_udid
+      register_devices(
+        devices: device_hash
+      )
+    refresh_profiles
+  end
+
+
+  desc "Bump both version numbers"
+    lane :bump do
+      ensure_git_status_clean
+      # Ask for a new CFBundleShortVersionString and bump the CFBundleVersion.
+      new_build_number = generate_build_number
+      version = ask("Enter a new version number - Last one is #{get_version_number}: ")
+      set_build_number(
+        new_build_number
+      )
+      set_version_number(
+        version
+      )
+
+      commit_version_bump(
+        message: "Version bump " + version + ", " + new_build_number,
+        force: true
+      )
+      add_git_tag tag: version
+      push_to_git_remote
+  end
+
+  # A helper lane for refreshing provisioning profiles.
+  lane :refresh_profiles do
+    match(
+      force_for_new_devices: true
+   )
+  end
+
+  def generate_build_number
+    commit = last_git_commit
+    short_hash = commit[:abbreviated_commit_hash]
+    return git_branch + "." + short_hash
+  end
+
+
+  #After All
+  after_all do |lane|
+    notification(subtitle: "Success", message: "Lane #{lane} completed successfully!")
+  end
+
+  #Error handling
+  error do |lane, exception|
+    clean_build_artifacts
+    puts "\n(╯°□°）╯︵ ┻━┻\n".red
+    notification(subtitle: "Failed", message: "Lane #{lane} failed to complete.")
+  end
+
+end
