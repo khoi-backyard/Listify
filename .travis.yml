@@ -1,0 +1,17 @@
+language: objective-c
+cache: cocoapods
+osx_image: xcode8.2
+
+notifications:
+  email:
+    - khoi.geeky@gmail.com
+    - cuongnt04230@gmail.com
+
+before_install:
+    - gem update fastlane --no-ri --no-rdoc --no-document
+    - pod repo update --silent
+
+install:
+    - cat ./Podfile
+
+script: ./build.sh
