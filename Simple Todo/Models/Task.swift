@@ -14,3 +14,4 @@ class Task: Object {
     dynamic var completed = false
     dynamic var dueDate: NSDate?
 }
+ 
