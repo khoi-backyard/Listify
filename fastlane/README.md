@@ -44,6 +44,11 @@ fastlane ios add_device
 fastlane ios bump
 ```
 Bump both version numbers
+### ios certificates
+```
+fastlane ios certificates
+```
+
 ### ios refresh_profiles
 ```
 fastlane ios refresh_profiles

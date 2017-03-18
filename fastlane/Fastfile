@@ -24,23 +24,8 @@ platform :ios do
       build_number: new_build_number
     )
 
-    create_keychain(
-      name: ENV["MATCH_KEYCHAIN_NAME"],
-      password: ENV["MATCH_PASSWORD"],
-      default_keychain: true,
-      unlock: true,
-      timeout: 3600,
-      add_to_search_list: true
-    )
-
-    match(
-      app_identifier: "io.khoi.Simple-Todo", 
-      type: "adhoc",
-      keychain_name: ENV["MATCH_KEYCHAIN_NAME"],
-      keychain_password: ENV["MATCH_PASSWORD"],
-      readonly: true
-    )
-
+    certificates
+    
     gym(scheme: "Simple Todo")
 
     # Upload the build to Crashlytics.
@@ -88,6 +73,40 @@ platform :ios do
       push_to_git_remote
   end
 
+  lane :certificates do
+    create_keychain(
+      name: ENV["MATCH_KEYCHAIN_NAME"],
+      password: ENV["MATCH_PASSWORD"],
+      default_keychain: true,
+      unlock: true,
+      timeout: 3600,
+      add_to_search_list: true
+    )
+
+    match(
+      app_identifier: "io.khoi.Simple-Todo", 
+      type: "development",
+      keychain_name: ENV["MATCH_KEYCHAIN_NAME"],
+      keychain_password: ENV["MATCH_PASSWORD"],
+      readonly: true
+    )
+
+    match(
+      app_identifier: "io.khoi.Simple-Todo", 
+      type: "adhoc",
+      keychain_name: ENV["MATCH_KEYCHAIN_NAME"],
+      keychain_password: ENV["MATCH_PASSWORD"],
+      readonly: true
+    )
+
+    match(
+      app_identifier: "io.khoi.Simple-Todo", 
+      type: "appstore",
+      keychain_name: ENV["MATCH_KEYCHAIN_NAME"],
+      keychain_password: ENV["MATCH_PASSWORD"],
+      readonly: true
+    )
+  end
   # A helper lane for refreshing provisioning profiles.
   lane :refresh_profiles do
     match(
