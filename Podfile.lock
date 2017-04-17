@@ -1,0 +1,55 @@
+PODS:
+  - Crashlytics (3.8.4):
+    - Fabric (~> 1.6.3)
+  - Fabric (1.6.11)
+  - MBProgressHUD (1.0.0)
+  - NSObject+Rx (2.0.0):
+    - RxSwift
+  - R.swift (3.2.0):
+    - R.swift.Library (~> 3.0.2)
+  - R.swift.Library (3.0.2)
+  - Realm (2.4.4):
+    - Realm/Headers (= 2.4.4)
+  - Realm/Headers (2.4.4)
+  - RealmSwift (2.4.4):
+    - Realm (= 2.4.4)
+  - RxCocoa (3.3.1):
+    - RxSwift (~> 3.3)
+  - RxRealm (0.5.2):
+    - RealmSwift (~> 2.4)
+    - RxSwift (~> 3.1)
+  - RxSwift (3.3.1)
+  - SnapKit (3.1.2)
+  - SwiftyBeaver (1.1.3)
+
+DEPENDENCIES:
+  - Crashlytics
+  - Fabric
+  - MBProgressHUD (~> 1.0.0)
+  - NSObject+Rx
+  - R.swift
+  - RealmSwift
+  - RxCocoa (~> 3.0)
+  - RxRealm
+  - RxSwift (~> 3.0)
+  - SnapKit (~> 3.1.0)
+  - SwiftyBeaver
+
+SPEC CHECKSUMS:
+  Crashlytics: 79e236942ca1e7fc641df1feb9a275360a78ab6a
+  Fabric: 5911403591946b8228ab1c51d98f1d7137e863c6
+  MBProgressHUD: 4890f671c94e8a0f3cf959aa731e9de2f036d71a
+  NSObject+Rx: 2a9cd801d9c847e6d2486cbad8d7701b67834e70
+  R.swift: 207a372a2b5977caef440c696a368009460641d1
+  R.swift.Library: fbdec16c9802ad104fc1ba53415dc190e6ec5c73
+  Realm: 5a280a1f5a9a3c267bebf4f41ee47911137703d7
+  RealmSwift: 0c02b9f2d4be4301c497ed10e53a0580584eb1dd
+  RxCocoa: 7dcb7a1860fc9cd0e23dae67ab105fc2916670b6
+  RxRealm: df024f04e64c3a9723dab63a6ec8621b3db6473f
+  RxSwift: 8fc9f2de6275a9101d518444e00bf32f1a42caac
+  SnapKit: 12b24f569cb7c143acc9c22b9d91b23e7b1c84a2
+  SwiftyBeaver: 949aa1439b8fa3667f68555cfef65de46a70ccde
+
+PODFILE CHECKSUM: e754de04c36e63d4d58160214e4b6599c22de72d
+
+COCOAPODS: 1.2.0
