@@ -21,10 +21,18 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
   
-  /// This `R.file` struct is generated, and contains static references to 1 files.
+  /// This `R.file` struct is generated, and contains static references to 2 files.
   struct file {
+    /// Resource file `GoogleService-Info.plist`.
+    static let googleServiceInfoPlist = Rswift.FileResource(bundle: R.hostingBundle, name: "GoogleService-Info", pathExtension: "plist")
     /// Resource file `Settings.bundle`.
     static let settingsBundle = Rswift.FileResource(bundle: R.hostingBundle, name: "Settings", pathExtension: "bundle")
+    
+    /// `bundle.url(forResource: "GoogleService-Info", withExtension: "plist")`
+    static func googleServiceInfoPlist(_: Void = ()) -> Foundation.URL? {
+      let fileResource = R.file.googleServiceInfoPlist
+      return fileResource.bundle.url(forResource: fileResource)
+    }
     
     /// `bundle.url(forResource: "Settings", withExtension: "bundle")`
     static func settingsBundle(_: Void = ()) -> Foundation.URL? {
@@ -103,7 +111,7 @@ struct R: Rswift.Validatable {
   
   fileprivate struct intern: Rswift.Validatable {
     fileprivate static func validate() throws {
-      // There are no resources to validate
+      try _R.validate()
     }
     
     fileprivate init() {}
@@ -114,7 +122,11 @@ struct R: Rswift.Validatable {
   fileprivate init() {}
 }
 
-struct _R {
+struct _R: Rswift.Validatable {
+  static func validate() throws {
+    try storyboard.validate()
+  }
+  
   struct nib {
     struct _LaunchScreen: Rswift.NibResourceType {
       let bundle = R.hostingBundle
@@ -141,12 +153,20 @@ struct _R {
     fileprivate init() {}
   }
   
-  struct storyboard {
-    struct authentication: Rswift.StoryboardResourceWithInitialControllerType {
+  struct storyboard: Rswift.Validatable {
+    static func validate() throws {
+      try authentication.validate()
+    }
+    
+    struct authentication: Rswift.StoryboardResourceWithInitialControllerType, Rswift.Validatable {
       typealias InitialController = UIKit.UINavigationController
       
       let bundle = R.hostingBundle
       let name = "Authentication"
+      
+      static func validate() throws {
+        if UIKit.UIImage(named: "app-logo") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'app-logo' is used in storyboard 'Authentication', but couldn't be loaded.") }
+      }
       
       fileprivate init() {}
     }

@@ -19,20 +19,34 @@
                     <view key="view" contentMode="scaleToFill" id="vz1-sO-MG0">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="app-logo" translatesAutoresizingMaskIntoConstraints="NO" id="7sp-Fx-WPi">
+                                <rect key="frame" x="87" y="84" width="200" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="vru-pa-HBj"/>
+                                    <constraint firstAttribute="width" constant="200" id="zVy-iY-UFA"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.93725490196078431" green="0.95294117647058818" blue="0.96470588235294119" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="7sp-Fx-WPi" firstAttribute="top" secondItem="fRj-ka-3UP" secondAttribute="bottom" constant="64" id="Ehg-lM-nV2"/>
+                            <constraint firstItem="7sp-Fx-WPi" firstAttribute="centerX" secondItem="vz1-sO-MG0" secondAttribute="centerX" id="H3c-VX-wKf"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="IqE-n3-La0"/>
+                    <nil key="simulatedTopBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3cr-6R-8AW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="518" y="-264"/>
+            <point key="canvasLocation" x="569" y="-264"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="rgp-1j-FLU">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="fvf-7B-prv" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="xhZ-ai-950">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="xhZ-ai-950">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -46,4 +60,7 @@
             <point key="canvasLocation" x="-191.19999999999999" y="-264.01799100449779"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="app-logo" width="240" height="240"/>
+    </resources>
 </document>
