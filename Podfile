@@ -9,6 +9,10 @@ target 'Simple Todo' do
     pod 'RxCocoa',    '~> 3.0'
     pod 'NSObject+Rx'
     pod 'RxRealm'
+    pod 'Action'
+    pod 'NSObject+Rx'
+    pod 'Result', '~> 3.0.0'
+
     pod 'SnapKit', '~> 3.1.0'
     pod 'RealmSwift'
     pod 'MBProgressHUD', '~> 1.0.0'

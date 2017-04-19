@@ -50,12 +50,12 @@ struct R: Rswift.Validatable {
   
   /// This `R.image` struct is generated, and contains static references to 1 images.
   struct image {
-    /// Image `app-logo`.
-    static let appLogo = Rswift.ImageResource(bundle: R.hostingBundle, name: "app-logo")
+    /// Image `google-logo`.
+    static let googleLogo = Rswift.ImageResource(bundle: R.hostingBundle, name: "google-logo")
     
-    /// `UIImage(named: "app-logo", bundle: ..., traitCollection: ...)`
-    static func appLogo(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
-      return UIKit.UIImage(resource: R.image.appLogo, compatibleWith: traitCollection)
+    /// `UIImage(named: "google-logo", bundle: ..., traitCollection: ...)`
+    static func googleLogo(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.googleLogo, compatibleWith: traitCollection)
     }
     
     fileprivate init() {}
@@ -165,7 +165,7 @@ struct _R: Rswift.Validatable {
       let name = "Authentication"
       
       static func validate() throws {
-        if UIKit.UIImage(named: "app-logo") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'app-logo' is used in storyboard 'Authentication', but couldn't be loaded.") }
+        if UIKit.UIImage(named: "google-logo") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'google-logo' is used in storyboard 'Authentication', but couldn't be loaded.") }
       }
       
       fileprivate init() {}

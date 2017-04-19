@@ -20,22 +20,36 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="app-logo" translatesAutoresizingMaskIntoConstraints="NO" id="7sp-Fx-WPi">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="google-logo" translatesAutoresizingMaskIntoConstraints="NO" id="7sp-Fx-WPi">
                                 <rect key="frame" x="87" y="84" width="200" height="200"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="200" id="vru-pa-HBj"/>
                                     <constraint firstAttribute="width" constant="200" id="zVy-iY-UFA"/>
                                 </constraints>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sw8-ch-7Eh">
+                                <rect key="frame" x="0.0" y="348" width="375" height="44"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="gzx-Wv-iDp"/>
+                                </constraints>
+                                <state key="normal" title="Sign In With Google"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.93725490196078431" green="0.95294117647058818" blue="0.96470588235294119" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="Sw8-ch-7Eh" firstAttribute="leading" secondItem="vz1-sO-MG0" secondAttribute="leading" id="4kN-d7-t1f"/>
+                            <constraint firstAttribute="trailing" secondItem="Sw8-ch-7Eh" secondAttribute="trailing" id="6HT-Fg-aVJ"/>
                             <constraint firstItem="7sp-Fx-WPi" firstAttribute="top" secondItem="fRj-ka-3UP" secondAttribute="bottom" constant="64" id="Ehg-lM-nV2"/>
                             <constraint firstItem="7sp-Fx-WPi" firstAttribute="centerX" secondItem="vz1-sO-MG0" secondAttribute="centerX" id="H3c-VX-wKf"/>
+                            <constraint firstItem="Sw8-ch-7Eh" firstAttribute="top" secondItem="7sp-Fx-WPi" secondAttribute="bottom" constant="64" id="Phu-3d-ChV"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="IqE-n3-La0"/>
                     <nil key="simulatedTopBarMetrics"/>
+                    <connections>
+                        <outlet property="googleSignInBtn" destination="Sw8-ch-7Eh" id="fxZ-5H-ALi"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3cr-6R-8AW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -61,6 +75,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="app-logo" width="240" height="240"/>
+        <image name="google-logo" width="240" height="240"/>
     </resources>
 </document>

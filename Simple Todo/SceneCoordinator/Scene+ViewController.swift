@@ -11,8 +11,10 @@ import UIKit
 extension Scene {
     func viewController() -> UIViewController {
         switch self {
-        case .authentication:
+        case .authentication(let viewModel):
             let navigationVC = R.storyboard.authentication().instantiateInitialViewController() as! UINavigationController  // swiftlint:disable:this force_cast
+            var authenticationVC = navigationVC.viewControllers.first as? AuthenticationViewController
+            authenticationVC?.bindViewModel(to: viewModel)
             return navigationVC
         }
     }

@@ -13,6 +13,7 @@
 		7C0333921E8B6E3300982136 /* Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C0333911E8B6E3300982136 /* Reusable.swift */; };
 		7C0333941E8B6E5D00982136 /* UITableView+Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C0333931E8B6E5D00982136 /* UITableView+Reusable.swift */; };
 		7C0333961E8B72DD00982136 /* UIColor+Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C0333951E8B72DD00982136 /* UIColor+Hex.swift */; };
+		7C0EA1AA1EA73F5400BC6250 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C0EA1A91EA73F5400BC6250 /* UserService.swift */; };
 		7C2B4E271E8A0FD500DD59BC /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C2B4E261E8A0FD500DD59BC /* R.generated.swift */; };
 		7C4F65271E8CE021006F4F1F /* AppConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C4F65261E8CE021006F4F1F /* AppConstant.swift */; };
 		7C86E5391E8270DD00E7A484 /* RealmConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C86E5381E8270DD00E7A484 /* RealmConstants.swift */; };
@@ -51,13 +52,14 @@
 		7C0333911E8B6E3300982136 /* Reusable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reusable.swift; sourceTree = "<group>"; };
 		7C0333931E8B6E5D00982136 /* UITableView+Reusable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableView+Reusable.swift"; sourceTree = "<group>"; };
 		7C0333951E8B72DD00982136 /* UIColor+Hex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Hex.swift"; sourceTree = "<group>"; };
+		7C0EA1A91EA73F5400BC6250 /* UserService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
 		7C2B4E261E8A0FD500DD59BC /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
 		7C4F65261E8CE021006F4F1F /* AppConstant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppConstant.swift; sourceTree = "<group>"; };
 		7C86E5381E8270DD00E7A484 /* RealmConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmConstants.swift; sourceTree = "<group>"; };
 		7CB7A6141EA5C76C007CF930 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		7CB7A6161EA5C7EC007CF930 /* Simple Todo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Simple Todo-Bridging-Header.h"; sourceTree = "<group>"; };
 		7CD27A681EA4C83B00B2A4EA /* Authentication.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Authentication.storyboard; sourceTree = "<group>"; };
-		7CD27A6B1EA4C87A00B2A4EA /* Scene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Scene.swift; path = Scene.swift; sourceTree = "<group>"; };
+		7CD27A6B1EA4C87A00B2A4EA /* Scene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Scene.swift; sourceTree = "<group>"; };
 		7CD27A6D1EA4C8B700B2A4EA /* AuthenticationViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticationViewModel.swift; sourceTree = "<group>"; };
 		7CD27A6F1EA4C93D00B2A4EA /* SceneCoordinatorType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneCoordinatorType.swift; sourceTree = "<group>"; };
 		7CD27A711EA4CA3500B2A4EA /* SceneTransitionType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneTransitionType.swift; sourceTree = "<group>"; };
@@ -114,6 +116,7 @@
 		220175C00881D15DDC20ED03 /* Simple Todo */ = {
 			isa = PBXGroup;
 			children = (
+				7C0EA1A81EA73F4800BC6250 /* Services */,
 				7C935E6B1E7BC362001C37A2 /* Apps */,
 				52B998222F59B86DCFE42CC4 /* Extensions */,
 				89E1ECA35DDBCC89C51F15FD /* Models */,
@@ -179,12 +182,19 @@
 			tabWidth = 4;
 			usesTabs = 0;
 		};
+		7C0EA1A81EA73F4800BC6250 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				7C0EA1A91EA73F5400BC6250 /* UserService.swift */,
+			);
+			name = Services;
+			sourceTree = "<group>";
+		};
 		7C86E5371E8270B500E7A484 /* Realm */ = {
 			isa = PBXGroup;
 			children = (
 				7C86E5381E8270DD00E7A484 /* RealmConstants.swift */,
 			);
-			name = Realm;
 			path = Realm;
 			sourceTree = "<group>";
 		};
@@ -207,7 +217,6 @@
 				7CD27A6F1EA4C93D00B2A4EA /* SceneCoordinatorType.swift */,
 				7CD27A711EA4CA3500B2A4EA /* SceneTransitionType.swift */,
 			);
-			name = SceneCoordinator;
 			path = SceneCoordinator;
 			sourceTree = "<group>";
 		};
@@ -217,7 +226,6 @@
 				7CDADB351E7BFE9E0062C93E /* Authentication */,
 				7CDADB341E7BFE910062C93E /* Task List */,
 			);
-			name = Scenes;
 			path = Scenes;
 			sourceTree = "<group>";
 		};
@@ -225,7 +233,6 @@
 			isa = PBXGroup;
 			children = (
 			);
-			name = "Task List";
 			path = "Task List";
 			sourceTree = "<group>";
 		};
@@ -235,7 +242,6 @@
 				7CD27A7D1EA4D25100B2A4EA /* AuthenticationViewController.swift */,
 				7CD27A6D1EA4C8B700B2A4EA /* AuthenticationViewModel.swift */,
 			);
-			name = Authentication;
 			path = Authentication;
 			sourceTree = "<group>";
 		};
@@ -487,6 +493,7 @@
 				7CD27A741EA4CAFB00B2A4EA /* SceneCoordinator.swift in Sources */,
 				7CD27A761EA4CF0400B2A4EA /* Scene+ViewController.swift in Sources */,
 				7CD27A6E1EA4C8B700B2A4EA /* AuthenticationViewModel.swift in Sources */,
+				7C0EA1AA1EA73F5400BC6250 /* UserService.swift in Sources */,
 				7CDADB311E7BDB2A0062C93E /* Task.swift in Sources */,
 				7C86E5391E8270DD00E7A484 /* RealmConstants.swift in Sources */,
 				7C4F65271E8CE021006F4F1F /* AppConstant.swift in Sources */,

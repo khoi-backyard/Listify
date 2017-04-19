@@ -11,6 +11,7 @@ import NSObject_Rx
 import SwiftyBeaver
 import Fabric
 import Crashlytics
+import NSObject_Rx
 
 let log = SwiftyBeaver.self
 
@@ -31,15 +32,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         var configureError: NSError?
         GGLContext.sharedInstance().configureWithError(&configureError)
         assert(configureError == nil, "Error configuring Google services: \(String(describing: configureError))")
-        GIDSignIn.sharedInstance().delegate = self
 
         //Setup View hierarchy
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.makeKeyAndVisible()
 
         let sceneCoordinator = SceneCoordinator(window: window!)
+        let userService = UserService()
 
-        let authenticationViewModel = AuthenticationViewModel()
+        let authenticationViewModel = AuthenticationViewModel(coordinator: sceneCoordinator, userService: userService)
         let authenticationScene = Scene.authentication(authenticationViewModel)
 
         sceneCoordinator.transition(to: authenticationScene, type: .root)
@@ -51,19 +52,5 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return GIDSignIn.sharedInstance().handle(url,
                                                  sourceApplication: options[.sourceApplication] as? String,
                                                  annotation: options[.annotation])
-    }
-}
-
-extension AppDelegate: GIDSignInDelegate {
-    func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!) {
-        if error == nil {
-            log.debug("\(user)")
-        } else {
-            log.error("\(error.localizedDescription)")
-        }
-    }
-
-    func sign(_ signIn: GIDSignIn!, didDisconnectWith user: GIDGoogleUser!, withError error: Error!) {
-        log.debug("\(user) logged out")
     }
 }
