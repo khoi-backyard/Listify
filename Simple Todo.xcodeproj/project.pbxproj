@@ -14,6 +14,8 @@
 		7C0333941E8B6E5D00982136 /* UITableView+Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C0333931E8B6E5D00982136 /* UITableView+Reusable.swift */; };
 		7C0333961E8B72DD00982136 /* UIColor+Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C0333951E8B72DD00982136 /* UIColor+Hex.swift */; };
 		7C0EA1AA1EA73F5400BC6250 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C0EA1A91EA73F5400BC6250 /* UserService.swift */; };
+		7C0EA1AC1EA74F4C00BC6250 /* Task.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7C0EA1AB1EA74F4C00BC6250 /* Task.storyboard */; };
+		7C0EA1B01EA75AED00BC6250 /* GIDSignIn+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C0EA1AF1EA75AED00BC6250 /* GIDSignIn+Rx.swift */; };
 		7C2B4E271E8A0FD500DD59BC /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C2B4E261E8A0FD500DD59BC /* R.generated.swift */; };
 		7C4F65271E8CE021006F4F1F /* AppConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C4F65261E8CE021006F4F1F /* AppConstant.swift */; };
 		7C86E5391E8270DD00E7A484 /* RealmConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C86E5381E8270DD00E7A484 /* RealmConstants.swift */; };
@@ -53,6 +55,8 @@
 		7C0333931E8B6E5D00982136 /* UITableView+Reusable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableView+Reusable.swift"; sourceTree = "<group>"; };
 		7C0333951E8B72DD00982136 /* UIColor+Hex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Hex.swift"; sourceTree = "<group>"; };
 		7C0EA1A91EA73F5400BC6250 /* UserService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
+		7C0EA1AB1EA74F4C00BC6250 /* Task.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Task.storyboard; sourceTree = "<group>"; };
+		7C0EA1AF1EA75AED00BC6250 /* GIDSignIn+Rx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "GIDSignIn+Rx.swift"; sourceTree = "<group>"; };
 		7C2B4E261E8A0FD500DD59BC /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
 		7C4F65261E8CE021006F4F1F /* AppConstant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppConstant.swift; sourceTree = "<group>"; };
 		7C86E5381E8270DD00E7A484 /* RealmConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmConstants.swift; sourceTree = "<group>"; };
@@ -144,6 +148,7 @@
 			isa = PBXGroup;
 			children = (
 				7CD27A681EA4C83B00B2A4EA /* Authentication.storyboard */,
+				7C0EA1AB1EA74F4C00BC6250 /* Task.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -154,6 +159,7 @@
 				7C0333951E8B72DD00982136 /* UIColor+Hex.swift */,
 				7CD27A771EA4D05A00B2A4EA /* UINavigationController+Rx.swift */,
 				7C0333931E8B6E5D00982136 /* UITableView+Reusable.swift */,
+				7C0EA1AF1EA75AED00BC6250 /* GIDSignIn+Rx.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -370,6 +376,7 @@
 				9FBE8EA893A9AAC6F142D6A9 /* Images.xcassets in Resources */,
 				75FC251101B647FC5C3ED1AF /* LaunchScreen.xib in Resources */,
 				891B0A6B77259CBADAAF2F71 /* Settings.bundle in Resources */,
+				7C0EA1AC1EA74F4C00BC6250 /* Task.storyboard in Resources */,
 				7CD31A791E8B6D8E00AAAC71 /* TextFieldTableViewCell.xib in Resources */,
 				7CD27A691EA4C83B00B2A4EA /* Authentication.storyboard in Resources */,
 				7CB7A6151EA5C76C007CF930 /* GoogleService-Info.plist in Resources */,
@@ -494,6 +501,7 @@
 				7CD27A761EA4CF0400B2A4EA /* Scene+ViewController.swift in Sources */,
 				7CD27A6E1EA4C8B700B2A4EA /* AuthenticationViewModel.swift in Sources */,
 				7C0EA1AA1EA73F5400BC6250 /* UserService.swift in Sources */,
+				7C0EA1B01EA75AED00BC6250 /* GIDSignIn+Rx.swift in Sources */,
 				7CDADB311E7BDB2A0062C93E /* Task.swift in Sources */,
 				7C86E5391E8270DD00E7A484 /* RealmConstants.swift in Sources */,
 				7C4F65271E8CE021006F4F1F /* AppConstant.swift in Sources */,

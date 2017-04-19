@@ -23,6 +23,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication,
                      didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey : Any]? = nil) -> Bool {
 
+        GIDSignIn.sharedInstance().signOut()
         //Configure some dependencies
         let console = ConsoleDestination()
         log.addDestination(console)

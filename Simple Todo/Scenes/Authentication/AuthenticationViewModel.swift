@@ -8,7 +8,7 @@
 
 import Foundation
 import RxSwift
-import Action
+import RxCocoa
 import RealmSwift
 
 struct AuthenticationViewModel {
@@ -17,28 +17,32 @@ struct AuthenticationViewModel {
     fileprivate let userService: UserService
     fileprivate let bag = DisposeBag()
 
-    let googleLoginTrigger = PublishSubject<String>()
+    let googleLoginTap = PublishSubject<Void>()
 
-    let loginResult: Observable<SignInResult>
+    let loginResult: Driver<SignInResult>
 
     init(coordinator: SceneCoordinatorType, userService: UserService) {
+
         self.sceneCoordinator = coordinator
         self.userService = userService
 
-        loginResult = googleLoginTrigger.flatMapLatest { (token) in
-            return userService.logIn(with: SyncCredentials.google(token: token))
+        loginResult =
+            googleLoginTap.do(onNext: { (_) in
+            GIDSignIn.sharedInstance().signIn()
+        })
+        .flatMapLatest { (_) in
+            return GIDSignIn.sharedInstance().rx.userDidSignIn
         }
-        .asObservable()
-    }
-
-    func onGoogleLoginTap() -> CocoaAction {
-        return CocoaAction {
-            Observable.create { (observer) -> Disposable in
-                GIDSignIn.sharedInstance().signIn()
-                observer.onCompleted()
-                return Disposables.create()
+        .flatMap { (result) -> Observable<SignInResult> in
+            switch result {
+            case .success(let user):
+                return userService.logIn(with: .google(token: user.authentication.idToken))
+            case .failure(let error):
+                return Observable.just(.failure(.invalid(msg: error.localizedDescription)))
             }
         }
+        .asDriver(onErrorJustReturn: SignInResult.failure(.invalid(msg: "Something went wrong!")))
+
     }
 
 }

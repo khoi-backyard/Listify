@@ -12,6 +12,7 @@ import RxSwift
 protocol SceneCoordinatorType {
     init(window: UIWindow)
 
+    @discardableResult
     func transition(to: Scene, type: SceneTransitionType) -> Observable<Void> // swiftlint:disable:this variable_name
 
     func pop(animated: Bool) -> Observable<Void>

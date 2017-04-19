@@ -6,16 +6,23 @@
 //  Copyright © 2017 khoi.io. All rights reserved.
 //
 
+// swiftlint:disable force_cast
+
 import UIKit
 
 extension Scene {
     func viewController() -> UIViewController {
         switch self {
         case .authentication(let viewModel):
-            let navigationVC = R.storyboard.authentication().instantiateInitialViewController() as! UINavigationController  // swiftlint:disable:this force_cast
+            let navigationVC = R.storyboard.authentication().instantiateInitialViewController() as! UINavigationController
             var authenticationVC = navigationVC.viewControllers.first as? AuthenticationViewController
             authenticationVC?.bindViewModel(to: viewModel)
             return navigationVC
+        case .task:
+            let navigationVC = R.storyboard.task().instantiateInitialViewController() as! UINavigationController
+//            let taskVC = navigationVC.viewControllers.first
+            return navigationVC
         }
+
     }
 }

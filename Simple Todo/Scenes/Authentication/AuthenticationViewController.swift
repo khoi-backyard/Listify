@@ -9,7 +9,6 @@
 import UIKit
 import RxSwift
 import RxCocoa
-import Action
 import RealmSwift
 
 class AuthenticationViewController: UIViewController, Bindable {
@@ -21,12 +20,12 @@ class AuthenticationViewController: UIViewController, Bindable {
     override func viewDidLoad() {
         super.viewDidLoad()
         GIDSignIn.sharedInstance().uiDelegate = self
-        GIDSignIn.sharedInstance().delegate = self
     }
 
     func bindViewModel() {
-        googleSignInBtn.rx.action = viewModel.onGoogleLoginTap()
-        viewModel.loginResult.subscribe(onNext: { (result) in
+        googleSignInBtn.rx.tap.bindTo(viewModel.googleLoginTap).addDisposableTo(rx_disposeBag)
+
+        viewModel.loginResult.asObservable().subscribe(onNext: { (result) in
             print(result)
         }).addDisposableTo(rx_disposeBag)
     }
@@ -41,21 +40,6 @@ class AuthenticationViewController: UIViewController, Bindable {
         self.navigationController?.setNavigationBarHidden(false, animated: animated)
     }
 
-}
-
-extension AuthenticationViewController: GIDSignInDelegate {
-    func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!) {
-        guard let token = user.authentication.idToken else {
-            log.error("Google login failed \(error.localizedDescription))")
-            return
-        }
-
-        viewModel.googleLoginTrigger.onNext(token)
-    }
-
-    func sign(_ signIn: GIDSignIn!, didDisconnectWith user: GIDGoogleUser!, withError error: Error!) {
-        log.debug("\(user) logged out")
-    }
 }
 
 extension AuthenticationViewController: GIDSignInUIDelegate {

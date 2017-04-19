@@ -91,14 +91,21 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
   
-  /// This `R.storyboard` struct is generated, and contains static references to 1 storyboards.
+  /// This `R.storyboard` struct is generated, and contains static references to 2 storyboards.
   struct storyboard {
     /// Storyboard `Authentication`.
     static let authentication = _R.storyboard.authentication()
+    /// Storyboard `Task`.
+    static let task = _R.storyboard.task()
     
     /// `UIStoryboard(name: "Authentication", bundle: ...)`
     static func authentication(_: Void = ()) -> UIKit.UIStoryboard {
       return UIKit.UIStoryboard(resource: R.storyboard.authentication)
+    }
+    
+    /// `UIStoryboard(name: "Task", bundle: ...)`
+    static func task(_: Void = ()) -> UIKit.UIStoryboard {
+      return UIKit.UIStoryboard(resource: R.storyboard.task)
     }
     
     fileprivate init() {}
@@ -167,6 +174,15 @@ struct _R: Rswift.Validatable {
       static func validate() throws {
         if UIKit.UIImage(named: "google-logo") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'google-logo' is used in storyboard 'Authentication', but couldn't be loaded.") }
       }
+      
+      fileprivate init() {}
+    }
+    
+    struct task: Rswift.StoryboardResourceWithInitialControllerType {
+      typealias InitialController = UIKit.UINavigationController
+      
+      let bundle = R.hostingBundle
+      let name = "Task"
       
       fileprivate init() {}
     }
