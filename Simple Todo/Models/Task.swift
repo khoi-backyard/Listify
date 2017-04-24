@@ -11,13 +11,13 @@ import RealmSwift
 import RxDataSources
 
 class Task: Object {
-    dynamic var id = NSUUID().uuidString // swiftlint:disable:this variable_name
+    dynamic var id = UUID().uuidString // swiftlint:disable:this variable_name
     dynamic var text = ""
 
     dynamic var added: Date = Date()
-    dynamic var completedDate: NSDate?
-    dynamic var reminderDate: NSDate?
-    dynamic var dueDate: NSDate?
+    dynamic var completedDate: Date?
+    dynamic var reminderDate: Date?
+    dynamic var dueDate: Date?
 
     override static func primaryKey() -> String? {
         return "id"

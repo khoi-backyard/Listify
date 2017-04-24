@@ -47,4 +47,18 @@ struct TaskService: TaskServiceType {
         }
         return result ?? .empty()
     }
+
+    func toggle(task: Task) -> Observable<Task> {
+        let result = withRealm("Toggling Task") { (realm) -> Observable<Task> in
+            try realm.write {
+                if task.completedDate == nil {
+                    task.completedDate = Date()
+                } else {
+                    task.completedDate = nil
+                }
+            }
+            return .just(task)
+        }
+        return result ?? .error(TaskServiceError.toggleFailed(task))
+    }
 }

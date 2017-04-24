@@ -21,8 +21,7 @@ class TasksViewController: UIViewController, Bindable {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        tableView.rowHeight = UITableViewAutomaticDimension
-        tableView.estimatedRowHeight = 60
+        tableView.rowHeight = 60
 
         configureDataSource()
     }
@@ -43,7 +42,9 @@ class TasksViewController: UIViewController, Bindable {
                                                            for: indexPath) as? TaskItemTableViewCell else {
                 fatalError("Expecting TaskItemTableViewCell")
             }
-            cell.configure(with: item)
+            if let strongSelf = self {
+                cell.configure(with: item, action: strongSelf.viewModel.onToggle(task: item))
+            }
             return cell
         }
     }

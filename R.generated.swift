@@ -48,10 +48,24 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
   
-  /// This `R.image` struct is generated, and contains static references to 1 images.
+  /// This `R.image` struct is generated, and contains static references to 3 images.
   struct image {
+    /// Image `checkmark-checked`.
+    static let checkmarkChecked = Rswift.ImageResource(bundle: R.hostingBundle, name: "checkmark-checked")
+    /// Image `checkmark-unchecked`.
+    static let checkmarkUnchecked = Rswift.ImageResource(bundle: R.hostingBundle, name: "checkmark-unchecked")
     /// Image `google-logo`.
     static let googleLogo = Rswift.ImageResource(bundle: R.hostingBundle, name: "google-logo")
+    
+    /// `UIImage(named: "checkmark-checked", bundle: ..., traitCollection: ...)`
+    static func checkmarkChecked(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.checkmarkChecked, compatibleWith: traitCollection)
+    }
+    
+    /// `UIImage(named: "checkmark-unchecked", bundle: ..., traitCollection: ...)`
+    static func checkmarkUnchecked(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.checkmarkUnchecked, compatibleWith: traitCollection)
+    }
     
     /// `UIImage(named: "google-logo", bundle: ..., traitCollection: ...)`
     static func googleLogo(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
@@ -148,6 +162,7 @@ struct _R: Rswift.Validatable {
   struct storyboard: Rswift.Validatable {
     static func validate() throws {
       try authentication.validate()
+      try task.validate()
     }
     
     struct authentication: Rswift.StoryboardResourceWithInitialControllerType, Rswift.Validatable {
@@ -163,11 +178,15 @@ struct _R: Rswift.Validatable {
       fileprivate init() {}
     }
     
-    struct task: Rswift.StoryboardResourceWithInitialControllerType {
+    struct task: Rswift.StoryboardResourceWithInitialControllerType, Rswift.Validatable {
       typealias InitialController = UIKit.UINavigationController
       
       let bundle = R.hostingBundle
       let name = "Task"
+      
+      static func validate() throws {
+        if UIKit.UIImage(named: "checkmark-unchecked") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'checkmark-unchecked' is used in storyboard 'Task', but couldn't be loaded.") }
+      }
       
       fileprivate init() {}
     }

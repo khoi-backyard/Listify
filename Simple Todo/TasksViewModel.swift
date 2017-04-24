@@ -35,4 +35,10 @@ struct TasksViewModel {
             ]
         }
     }
+
+    func onToggle(task: Task) -> CocoaAction {
+        return CocoaAction { _ in
+            self.taskService.toggle(task: task).map { _ in }
+        }
+    }
 }

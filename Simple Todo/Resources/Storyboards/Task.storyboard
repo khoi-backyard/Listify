@@ -21,32 +21,44 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="5L4-ob-2zE">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="60" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="5L4-ob-2zE">
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="taskCell" id="sFi-ob-Yho" customClass="TaskItemTableViewCell" customModule="Simple_Todo" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="taskCell" id="sFi-ob-Yho" customClass="TaskItemTableViewCell" customModule="Simple_Todo" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="sFi-ob-Yho" id="uac-pS-6Qb">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="59.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hfJ-yI-HLi">
-                                                    <rect key="frame" x="8" y="0.0" width="42" height="43.5"/>
+                                                    <rect key="frame" x="46" y="0.0" width="321" height="59.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8U9-C9-oEq">
+                                                    <rect key="frame" x="8" y="15" width="30" height="30"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="30" id="KEP-o8-WXr"/>
+                                                        <constraint firstAttribute="width" constant="30" id="v0W-kG-iNR"/>
+                                                    </constraints>
+                                                    <state key="normal" image="checkmark-unchecked"/>
+                                                </button>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="hfJ-yI-HLi" firstAttribute="leading" secondItem="uac-pS-6Qb" secondAttribute="leadingMargin" id="9vT-Ng-pCf"/>
+                                                <constraint firstItem="8U9-C9-oEq" firstAttribute="centerY" secondItem="uac-pS-6Qb" secondAttribute="centerY" id="1X5-Wy-UOA"/>
+                                                <constraint firstItem="hfJ-yI-HLi" firstAttribute="leading" secondItem="8U9-C9-oEq" secondAttribute="trailing" constant="8" id="UJ7-iW-o6m"/>
                                                 <constraint firstAttribute="bottom" secondItem="hfJ-yI-HLi" secondAttribute="bottom" id="b7H-NK-cjY"/>
+                                                <constraint firstItem="8U9-C9-oEq" firstAttribute="leading" secondItem="uac-pS-6Qb" secondAttribute="leadingMargin" id="bfT-fm-1Qs"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="hfJ-yI-HLi" secondAttribute="trailing" id="f8C-un-cFB"/>
                                                 <constraint firstItem="hfJ-yI-HLi" firstAttribute="top" secondItem="uac-pS-6Qb" secondAttribute="top" id="iMF-If-SJG"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="taskLabel" destination="hfJ-yI-HLi" id="qqc-F3-aBY"/>
+                                            <outlet property="toggleBtn" destination="8U9-C9-oEq" id="nNY-SC-dPG"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -67,7 +79,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Mf7-0W-qSh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2574.5" y="60.5"/>
+            <point key="canvasLocation" x="2573.5999999999999" y="59.820089955022496"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="dpZ-vt-mjo">
@@ -88,4 +100,7 @@
             <point key="canvasLocation" x="1762" y="60"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="checkmark-unchecked" width="147" height="147"/>
+    </resources>
 </document>
