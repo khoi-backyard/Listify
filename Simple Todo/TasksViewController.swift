@@ -43,7 +43,7 @@ class TasksViewController: UIViewController, Bindable {
                                                            for: indexPath) as? TaskItemTableViewCell else {
                 fatalError("Expecting TaskItemTableViewCell")
             }
-            cell.taskLabel.text = item.text
+            cell.configure(with: item)
             return cell
         }
     }

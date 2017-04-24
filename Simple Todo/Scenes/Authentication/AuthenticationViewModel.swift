@@ -44,13 +44,14 @@ struct AuthenticationViewModel {
                 .flatMap { (result: SignInResult) -> Observable<Void> in
                     switch result {
                     case .success(let user):
-                        let taskService = TaskService(syncConfig: SyncConfiguration(user: user, realmURL: RealmConstants.syncServerURL))
+                        let taskService = try TaskService(syncConfig: SyncConfiguration(user: user, realmURL: RealmConstants.syncServerURL))
                         let taskViewModel = TasksViewModel(taskService: taskService)
                         return self.sceneCoordinator.transition(to: Scene.task(taskViewModel), type: .root)
                     case .failure:
                         return Observable<Void>.just(())
                     }
                 }
+
         }
     }
 }

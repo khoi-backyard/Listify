@@ -7,18 +7,24 @@
 //
 
 import UIKit
+import RxSwift
 
 class TaskItemTableViewCell: UITableViewCell {
 
     @IBOutlet weak var taskLabel: UILabel!
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
+
+    var bag = DisposeBag()
+
+    func configure(with task: Task) {
+        task.rx.observe(String.self, "text").subscribe(onNext: { [weak self] in
+            self?.taskLabel.text = $0
+        })
+        .addDisposableTo(bag)
     }
 
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        bag = DisposeBag()
     }
 
 }

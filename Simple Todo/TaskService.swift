@@ -13,14 +13,15 @@ import RxRealm
 
 struct TaskService: TaskServiceType {
     private let config: Realm.Configuration
+    private let realm: Realm
 
-    init(syncConfig: SyncConfiguration) {
+    init(syncConfig: SyncConfiguration) throws {
         config = Realm.Configuration(syncConfiguration: syncConfig)
+        realm = try Realm(configuration: config)
     }
 
     fileprivate func withRealm<T>(_ operation: String, action: (Realm) throws -> T) -> T? {
         do {
-            let realm = try Realm(configuration: config)
             return try action(realm)
         } catch let err {
             log.error("Failed \(operation) realm with error: \(err)")
