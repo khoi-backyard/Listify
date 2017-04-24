@@ -18,6 +18,8 @@ class TasksViewController: UIViewController, Bindable {
 
     @IBOutlet weak var tableView: UITableView!
 
+    @IBOutlet weak var addTaskBtn: UIButton!
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -30,6 +32,8 @@ class TasksViewController: UIViewController, Bindable {
         viewModel.sectionedItems
             .bindTo(tableView.rx.items(dataSource: dataSource))
             .addDisposableTo(rx_disposeBag)
+
+        addTaskBtn.rx.action = viewModel.onCreate()
     }
 
     fileprivate func configureDataSource() {

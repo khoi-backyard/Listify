@@ -26,6 +26,6 @@ class Task: Object {
 
 extension Task: IdentifiableType {
     var identity: String {
-        return id
+        return self.isInvalidated ? "" : id
     }
 }

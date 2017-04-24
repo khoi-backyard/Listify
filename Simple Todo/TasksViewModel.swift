@@ -49,4 +49,12 @@ struct TasksViewModel {
 
         }
     }
+
+    func onCreate() -> CocoaAction {
+        return CocoaAction {
+            let task = Task()
+            task.text = "Some Task \(Date().timeIntervalSince1970)"
+            return self.taskService.create(task: task).map { _ in }
+        }
+    }
 }
