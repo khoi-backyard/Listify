@@ -21,12 +21,14 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
   
-  /// This `R.file` struct is generated, and contains static references to 2 files.
+  /// This `R.file` struct is generated, and contains static references to 3 files.
   struct file {
     /// Resource file `GoogleService-Info.plist`.
     static let googleServiceInfoPlist = Rswift.FileResource(bundle: R.hostingBundle, name: "GoogleService-Info", pathExtension: "plist")
     /// Resource file `Settings.bundle`.
     static let settingsBundle = Rswift.FileResource(bundle: R.hostingBundle, name: "Settings", pathExtension: "bundle")
+    /// Resource file `success.wav`.
+    static let successWav = Rswift.FileResource(bundle: R.hostingBundle, name: "success", pathExtension: "wav")
     
     /// `bundle.url(forResource: "GoogleService-Info", withExtension: "plist")`
     static func googleServiceInfoPlist(_: Void = ()) -> Foundation.URL? {
@@ -37,6 +39,12 @@ struct R: Rswift.Validatable {
     /// `bundle.url(forResource: "Settings", withExtension: "bundle")`
     static func settingsBundle(_: Void = ()) -> Foundation.URL? {
       let fileResource = R.file.settingsBundle
+      return fileResource.bundle.url(forResource: fileResource)
+    }
+    
+    /// `bundle.url(forResource: "success", withExtension: "wav")`
+    static func successWav(_: Void = ()) -> Foundation.URL? {
+      let fileResource = R.file.successWav
       return fileResource.bundle.url(forResource: fileResource)
     }
     

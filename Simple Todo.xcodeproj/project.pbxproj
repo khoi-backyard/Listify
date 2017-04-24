@@ -22,6 +22,8 @@
 		7C0EA1AC1EA74F4C00BC6250 /* Task.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7C0EA1AB1EA74F4C00BC6250 /* Task.storyboard */; };
 		7C0EA1B01EA75AED00BC6250 /* GIDSignIn+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C0EA1AF1EA75AED00BC6250 /* GIDSignIn+Rx.swift */; };
 		7C2B4E271E8A0FD500DD59BC /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C2B4E261E8A0FD500DD59BC /* R.generated.swift */; };
+		7C43BA5D1EAE4C94001018F9 /* SoundService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C43BA5C1EAE4C94001018F9 /* SoundService.swift */; };
+		7C43BA601EAE4E7F001018F9 /* success.wav in Resources */ = {isa = PBXBuildFile; fileRef = 7C43BA5F1EAE4E7F001018F9 /* success.wav */; };
 		7C4F65271E8CE021006F4F1F /* AppConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C4F65261E8CE021006F4F1F /* AppConstant.swift */; };
 		7C86E5391E8270DD00E7A484 /* RealmConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C86E5381E8270DD00E7A484 /* RealmConstants.swift */; };
 		7CB7A6151EA5C76C007CF930 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7CB7A6141EA5C76C007CF930 /* GoogleService-Info.plist */; };
@@ -66,6 +68,8 @@
 		7C0EA1AB1EA74F4C00BC6250 /* Task.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Task.storyboard; sourceTree = "<group>"; };
 		7C0EA1AF1EA75AED00BC6250 /* GIDSignIn+Rx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "GIDSignIn+Rx.swift"; sourceTree = "<group>"; };
 		7C2B4E261E8A0FD500DD59BC /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
+		7C43BA5C1EAE4C94001018F9 /* SoundService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SoundService.swift; sourceTree = "<group>"; };
+		7C43BA5F1EAE4E7F001018F9 /* success.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = success.wav; sourceTree = "<group>"; };
 		7C4F65261E8CE021006F4F1F /* AppConstant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppConstant.swift; sourceTree = "<group>"; };
 		7C86E5381E8270DD00E7A484 /* RealmConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmConstants.swift; sourceTree = "<group>"; };
 		7CB7A6141EA5C76C007CF930 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -198,8 +202,17 @@
 				7C0EA1A91EA73F5400BC6250 /* UserService.swift */,
 				7C016C491EAE060E00C638D2 /* TaskService.swift */,
 				7C016C4B1EAE0C2D00C638D2 /* TaskServiceType.swift */,
+				7C43BA5C1EAE4C94001018F9 /* SoundService.swift */,
 			);
 			name = Services;
+			sourceTree = "<group>";
+		};
+		7C43BA5E1EAE4E74001018F9 /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				7C43BA5F1EAE4E7F001018F9 /* success.wav */,
+			);
+			name = Sounds;
 			sourceTree = "<group>";
 		};
 		7C86E5371E8270B500E7A484 /* Realm */ = {
@@ -288,6 +301,7 @@
 		C36408C3275ED566BCD4BE9E /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				7C43BA5E1EAE4E74001018F9 /* Sounds */,
 				DFA7B614A4C710D7BC34DC13 /* Nibs */,
 				CEDE38FE30D0C2E736890E36 /* Other-Sources */,
 				419805E93077BCD27A8EDC51 /* Storyboards */,
@@ -385,6 +399,7 @@
 				9FBE8EA893A9AAC6F142D6A9 /* Images.xcassets in Resources */,
 				75FC251101B647FC5C3ED1AF /* LaunchScreen.xib in Resources */,
 				891B0A6B77259CBADAAF2F71 /* Settings.bundle in Resources */,
+				7C43BA601EAE4E7F001018F9 /* success.wav in Resources */,
 				7C0EA1AC1EA74F4C00BC6250 /* Task.storyboard in Resources */,
 				7CD27A691EA4C83B00B2A4EA /* Authentication.storyboard in Resources */,
 				7CB7A6151EA5C76C007CF930 /* GoogleService-Info.plist in Resources */,
@@ -525,6 +540,7 @@
 				7CE31CF21E8B86F900874284 /* NibLoadableView.swift in Sources */,
 				7C0333921E8B6E3300982136 /* Reusable.swift in Sources */,
 				7C2B4E271E8A0FD500DD59BC /* R.generated.swift in Sources */,
+				7C43BA5D1EAE4C94001018F9 /* SoundService.swift in Sources */,
 				7C016C521EAE13AD00C638D2 /* TaskItemTableViewCell.swift in Sources */,
 				412C7C1786E0D7538E74FBAA /* AppDelegate.swift in Sources */,
 				7CD27A701EA4C93D00B2A4EA /* SceneCoordinatorType.swift in Sources */,

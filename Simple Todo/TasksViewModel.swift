@@ -18,6 +18,7 @@ struct TasksViewModel {
 
     init(taskService: TaskServiceType) {
         self.taskService = taskService
+        SoundService.shared.prepareSound(fileName: R.file.successWav.fullName)
     }
 
     var sectionedItems: Observable<[TaskSection]> {
@@ -38,7 +39,14 @@ struct TasksViewModel {
 
     func onToggle(task: Task) -> CocoaAction {
         return CocoaAction { _ in
-            self.taskService.toggle(task: task).map { _ in }
+            self.taskService.toggle(task: task)
+                .do(onNext: { (task) in
+                    if task.completedDate != nil {
+                        SoundService.shared.playSound(fileName: R.file.successWav.fullName)
+                    }
+                })
+                .map { _ in }
+
         }
     }
 }
