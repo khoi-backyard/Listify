@@ -10,6 +10,7 @@ import UIKit
 import RxSwift
 import RxCocoa
 import RealmSwift
+import Action
 
 class AuthenticationViewController: UIViewController, Bindable {
 
@@ -23,11 +24,7 @@ class AuthenticationViewController: UIViewController, Bindable {
     }
 
     func bindViewModel() {
-        googleSignInBtn.rx.tap.bindTo(viewModel.googleLoginTap).addDisposableTo(rx_disposeBag)
-
-        viewModel.loginResult.asObservable().subscribe(onNext: { (result) in
-            print(result)
-        }).addDisposableTo(rx_disposeBag)
+        googleSignInBtn.rx.action = viewModel.onGoogleSignIn()
     }
 
     override func viewWillAppear(_ animated: Bool) {

@@ -11,6 +11,7 @@ target 'Simple Todo' do
     pod 'RxRealm'
     pod 'NSObject+Rx'
     pod 'Result', '~> 3.0.0'
+    pod 'Action'
 
     pod 'SnapKit', '~> 3.1.0'
     pod 'RealmSwift'
