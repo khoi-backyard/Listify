@@ -61,28 +61,24 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
   
-  /// This `R.nib` struct is generated, and contains static references to 2 nibs.
+  /// This `R.nib` struct is generated, and contains static references to 1 nibs.
   struct nib {
     /// Nib `LaunchScreen`.
     static let launchScreen = _R.nib._LaunchScreen()
-    /// Nib `TextFieldTableViewCell`.
-    static let textFieldTableViewCell = _R.nib._TextFieldTableViewCell()
     
     /// `UINib(name: "LaunchScreen", in: bundle)`
     static func launchScreen(_: Void = ()) -> UIKit.UINib {
       return UIKit.UINib(resource: R.nib.launchScreen)
     }
     
-    /// `UINib(name: "TextFieldTableViewCell", in: bundle)`
-    static func textFieldTableViewCell(_: Void = ()) -> UIKit.UINib {
-      return UIKit.UINib(resource: R.nib.textFieldTableViewCell)
-    }
-    
     fileprivate init() {}
   }
   
-  /// This `R.reuseIdentifier` struct is generated, and contains static references to 0 reuse identifiers.
+  /// This `R.reuseIdentifier` struct is generated, and contains static references to 1 reuse identifiers.
   struct reuseIdentifier {
+    /// Reuse identifier `taskCell`.
+    static let taskCell: Rswift.ReuseIdentifier<TaskItemTableViewCell> = Rswift.ReuseIdentifier(identifier: "taskCell")
+    
     fileprivate init() {}
   }
   
@@ -141,17 +137,6 @@ struct _R: Rswift.Validatable {
       
       func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [NSObject : AnyObject]? = nil) -> UIKit.UIView? {
         return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? UIKit.UIView
-      }
-      
-      fileprivate init() {}
-    }
-    
-    struct _TextFieldTableViewCell: Rswift.NibResourceType {
-      let bundle = R.hostingBundle
-      let name = "TextFieldTableViewCell"
-      
-      func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [NSObject : AnyObject]? = nil) -> TextFieldTableViewCell? {
-        return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? TextFieldTableViewCell
       }
       
       fileprivate init() {}

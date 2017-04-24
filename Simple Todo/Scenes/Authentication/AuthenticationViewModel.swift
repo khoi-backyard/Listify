@@ -43,8 +43,10 @@ struct AuthenticationViewModel {
                 .observeOn(MainScheduler.instance)
                 .flatMap { (result: SignInResult) -> Observable<Void> in
                     switch result {
-                    case .success:
-                        return self.sceneCoordinator.transition(to: Scene.task, type: .root)
+                    case .success(let user):
+                        let taskService = TaskService(syncConfig: SyncConfiguration(user: user, realmURL: RealmConstants.syncServerURL))
+                        let taskViewModel = TasksViewModel(taskService: taskService)
+                        return self.sceneCoordinator.transition(to: Scene.task(taskViewModel), type: .root)
                     case .failure:
                         return Observable<Void>.just(())
                     }
