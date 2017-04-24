@@ -12,6 +12,7 @@ import SwiftyBeaver
 import Fabric
 import Crashlytics
 import NSObject_Rx
+import RealmSwift
 
 let log = SwiftyBeaver.self
 
@@ -39,12 +40,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.makeKeyAndVisible()
 
         let sceneCoordinator = SceneCoordinator(window: window!)
-        let userService = UserService()
 
-        let authenticationViewModel = AuthenticationViewModel(coordinator: sceneCoordinator, userService: userService)
-        let authenticationScene = Scene.authentication(authenticationViewModel)
+        if let user = SyncUser.current,
+            let taskService = try? TaskService(syncConfig: SyncConfiguration(user: user,
+                                                                             realmURL: RealmConstants.syncServerURL)) {
 
-        sceneCoordinator.transition(to: authenticationScene, type: .root)
+            let taskViewModel = TasksViewModel(taskService: taskService)
+            sceneCoordinator.transition(to: Scene.task(taskViewModel), type: .root)
+        } else {
+            let userService = UserService()
+            let authenticationViewModel = AuthenticationViewModel(coordinator: sceneCoordinator, userService: userService)
+            let authenticationScene = Scene.authentication(authenticationViewModel)
+            sceneCoordinator.transition(to: authenticationScene, type: .root)
+        }
 
         return true
     }
