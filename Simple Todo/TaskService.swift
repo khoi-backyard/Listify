@@ -48,6 +48,14 @@ struct TaskService: TaskServiceType {
         return result ?? .empty()
     }
 
+    func taskLists() -> Observable<Results<TaskList>> {
+        let result = withRealm("Getting Task Lists") { (realm) -> Observable<Results<TaskList>> in
+            let taskLists = realm.objects(TaskList.self)
+            return Observable.collection(from: taskLists)
+        }
+        return result ?? .empty()
+    }
+
     func toggle(task: Task) -> Observable<Task> {
         let result = withRealm("Toggling Task") { (realm) -> Observable<Task> in
             try realm.write {

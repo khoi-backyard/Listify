@@ -18,9 +18,9 @@ extension Scene {
             var authenticationVC = navigationVC.viewControllers.first as? AuthenticationViewController
             authenticationVC?.bindViewModel(to: viewModel)
             return navigationVC
-        case .task(let viewModel):
+        case .taskList(let viewModel):
             let navigationVC = R.storyboard.task().instantiateInitialViewController() as! UINavigationController
-            var taskVC = navigationVC.viewControllers.first as? TasksViewController
+            var taskVC = navigationVC.viewControllers.first as? TaskListsViewController
             taskVC?.bindViewModel(to: viewModel)
             return navigationVC
         }

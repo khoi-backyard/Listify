@@ -56,7 +56,7 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
   
-  /// This `R.image` struct is generated, and contains static references to 3 images.
+  /// This `R.image` struct is generated, and contains static references to 4 images.
   struct image {
     /// Image `checkmark-checked`.
     static let checkmarkChecked = Rswift.ImageResource(bundle: R.hostingBundle, name: "checkmark-checked")
@@ -64,6 +64,8 @@ struct R: Rswift.Validatable {
     static let checkmarkUnchecked = Rswift.ImageResource(bundle: R.hostingBundle, name: "checkmark-unchecked")
     /// Image `google-logo`.
     static let googleLogo = Rswift.ImageResource(bundle: R.hostingBundle, name: "google-logo")
+    /// Image `list-icon`.
+    static let listIcon = Rswift.ImageResource(bundle: R.hostingBundle, name: "list-icon")
     
     /// `UIImage(named: "checkmark-checked", bundle: ..., traitCollection: ...)`
     static func checkmarkChecked(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
@@ -78,6 +80,11 @@ struct R: Rswift.Validatable {
     /// `UIImage(named: "google-logo", bundle: ..., traitCollection: ...)`
     static func googleLogo(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
       return UIKit.UIImage(resource: R.image.googleLogo, compatibleWith: traitCollection)
+    }
+    
+    /// `UIImage(named: "list-icon", bundle: ..., traitCollection: ...)`
+    static func listIcon(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.listIcon, compatibleWith: traitCollection)
     }
     
     fileprivate init() {}
@@ -96,10 +103,12 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
   
-  /// This `R.reuseIdentifier` struct is generated, and contains static references to 1 reuse identifiers.
+  /// This `R.reuseIdentifier` struct is generated, and contains static references to 2 reuse identifiers.
   struct reuseIdentifier {
     /// Reuse identifier `taskCell`.
     static let taskCell: Rswift.ReuseIdentifier<TaskItemTableViewCell> = Rswift.ReuseIdentifier(identifier: "taskCell")
+    /// Reuse identifier `taskListsCell`.
+    static let taskListsCell: Rswift.ReuseIdentifier<TaskListsTableViewCell> = Rswift.ReuseIdentifier(identifier: "taskListsCell")
     
     fileprivate init() {}
   }
@@ -191,9 +200,16 @@ struct _R: Rswift.Validatable {
       
       let bundle = R.hostingBundle
       let name = "Task"
+      let tasksViewController = StoryboardViewControllerResource<TasksViewController>(identifier: "TasksViewController")
+      
+      func tasksViewController(_: Void = ()) -> TasksViewController? {
+        return UIKit.UIStoryboard(resource: self).instantiateViewController(withResource: tasksViewController)
+      }
       
       static func validate() throws {
+        if UIKit.UIImage(named: "list-icon") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'list-icon' is used in storyboard 'Task', but couldn't be loaded.") }
         if UIKit.UIImage(named: "checkmark-unchecked") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'checkmark-unchecked' is used in storyboard 'Task', but couldn't be loaded.") }
+        if _R.storyboard.task().tasksViewController() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'tasksViewController' could not be loaded from storyboard 'Task' as 'TasksViewController'.") }
       }
       
       fileprivate init() {}
