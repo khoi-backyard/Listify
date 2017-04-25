@@ -20,7 +20,7 @@ extension Scene {
             return navigationVC
         case .taskList(let viewModel):
             let navigationVC = R.storyboard.task().instantiateInitialViewController() as! UINavigationController
-            var taskVC = navigationVC.viewControllers.first as? TaskListsViewController
+            var taskVC = navigationVC.viewControllers.first as? ListsViewController
             taskVC?.bindViewModel(to: viewModel)
             return navigationVC
         }

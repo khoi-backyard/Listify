@@ -10,5 +10,5 @@ import Foundation
 
 enum Scene {
     case authentication(AuthenticationViewModel)
-    case taskList(TaskListsViewModel)
+    case taskList(ListsViewModel)
 }

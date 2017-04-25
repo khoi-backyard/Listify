@@ -11,9 +11,9 @@ import RxSwift
 import RxDataSources
 import Action
 
-typealias TaskListsSection = AnimatableSectionModel<String, TaskList>
+typealias ListsSection = AnimatableSectionModel<String, TaskList>
 
-struct TaskListsViewModel {
+struct ListsViewModel {
 
     let taskService: TaskServiceType
 
@@ -21,11 +21,11 @@ struct TaskListsViewModel {
         self.taskService = taskService
     }
 
-    var sectionItems: Observable<[TaskListsSection]> {
+    var sectionItems: Observable<[ListsSection]> {
         return taskService.taskLists().map({ (results) in
             let lists = results.sorted(byKeyPath: "sortOrder", ascending: false)
             return [
-                TaskListsSection(model: "Task Lists", items: lists.toArray())
+                ListsSection(model: "Task Lists", items: lists.toArray())
             ]
         })
     }

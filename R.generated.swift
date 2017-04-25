@@ -108,7 +108,7 @@ struct R: Rswift.Validatable {
     /// Reuse identifier `taskCell`.
     static let taskCell: Rswift.ReuseIdentifier<TaskItemTableViewCell> = Rswift.ReuseIdentifier(identifier: "taskCell")
     /// Reuse identifier `taskListsCell`.
-    static let taskListsCell: Rswift.ReuseIdentifier<TaskListsTableViewCell> = Rswift.ReuseIdentifier(identifier: "taskListsCell")
+    static let taskListsCell: Rswift.ReuseIdentifier<ListsTableViewCell> = Rswift.ReuseIdentifier(identifier: "taskListsCell")
     
     fileprivate init() {}
   }

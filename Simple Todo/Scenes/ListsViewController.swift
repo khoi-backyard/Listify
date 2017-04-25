@@ -1,5 +1,5 @@
 //
-//  TaskListsViewController.swift
+//  ListsViewController.swift
 //  Simple Todo
 //
 //  Created by Khoi Lai on 4/25/17.
@@ -11,10 +11,10 @@ import RxSwift
 import RxDataSources
 import Action
 
-class TaskListsViewController: UIViewController, Bindable {
+class ListsViewController: UIViewController, Bindable {
 
-    var viewModel: TaskListsViewModel!
-    let dataSource = RxTableViewSectionedAnimatedDataSource<TaskListsSection>()
+    var viewModel: ListsViewModel!
+    let dataSource = RxTableViewSectionedAnimatedDataSource<ListsSection>()
 
     @IBOutlet weak var tableView: UITableView!
 
@@ -32,7 +32,7 @@ class TaskListsViewController: UIViewController, Bindable {
     fileprivate func configureDataSource() {
         dataSource.configureCell = { dataSource, tableView, indexPath, item in
             guard let cell = tableView.dequeueReusableCell(withIdentifier: R.reuseIdentifier.taskListsCell.identifier,
-                                                           for: indexPath) as? TaskListsTableViewCell else {
+                                                           for: indexPath) as? ListsTableViewCell else {
                 fatalError("Expecting TaskListsTableViewCell")
             }
             cell.configure(with: item)

@@ -45,7 +45,7 @@ struct AuthenticationViewModel {
                     switch result {
                     case .success(let user):
                         let taskService = try TaskService(syncConfig: SyncConfiguration(user: user, realmURL: RealmConstants.syncServerURL))
-                        let taskListViewModel = TaskListsViewModel(taskService: taskService)
+                        let taskListViewModel = ListsViewModel(taskService: taskService)
                         return self.sceneCoordinator.transition(to: Scene.taskList(taskListViewModel), type: .root)
                     case .failure:
                         return Observable<Void>.just(())

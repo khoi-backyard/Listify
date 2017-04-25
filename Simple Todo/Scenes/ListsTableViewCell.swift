@@ -1,5 +1,5 @@
 //
-//  TaskListsTableViewCell.swift
+//  ListsTableViewCell.swift
 //  Simple Todo
 //
 //  Created by Khoi Lai on 4/25/17.
@@ -9,7 +9,7 @@
 import UIKit
 import RxSwift
 
-class TaskListsTableViewCell: UITableViewCell {
+class ListsTableViewCell: UITableViewCell {
     @IBOutlet weak var listNameLabel: UILabel!
 
     var bag = DisposeBag()

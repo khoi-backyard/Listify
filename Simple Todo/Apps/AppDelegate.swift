@@ -45,8 +45,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             let taskService = try? TaskService(syncConfig: SyncConfiguration(user: user,
                                                                              realmURL: RealmConstants.syncServerURL)) {
 
-            let taskListViewModel = TaskListsViewModel(taskService: taskService)
-            sceneCoordinator.transition(to: Scene.taskList(taskListViewModel), type: .root)
+            let listViewModel = ListsViewModel(taskService: taskService)
+            sceneCoordinator.transition(to: Scene.taskList(listViewModel), type: .root)
         } else {
             let userService = UserService()
             let authenticationViewModel = AuthenticationViewModel(coordinator: sceneCoordinator, userService: userService)
