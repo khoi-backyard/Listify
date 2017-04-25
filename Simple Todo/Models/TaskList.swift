@@ -11,7 +11,7 @@ import RealmSwift
 
 class TaskList: Object {
     dynamic var id = NSUUID().uuidString // swiftlint:disable:this variable_name
-    dynamic var text = ""
+    dynamic var name = ""
     let items = List<Task>()
 
     override static func primaryKey() -> String? {
