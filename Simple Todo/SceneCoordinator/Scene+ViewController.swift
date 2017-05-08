@@ -23,6 +23,10 @@ extension Scene {
             var taskVC = navigationVC.viewControllers.first as? ListsViewController
             taskVC?.bindViewModel(to: viewModel)
             return navigationVC
+        case .tasks(let viewModel):
+            var tasksVC = R.storyboard.task.tasksViewController()!
+            tasksVC.bindViewModel(to: viewModel)
+            return tasksVC
         }
 
     }

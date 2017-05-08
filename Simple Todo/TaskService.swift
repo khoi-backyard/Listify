@@ -40,7 +40,7 @@ struct TaskService: TaskServiceType {
         return result ?? .error(TaskServiceError.creationFailed)
     }
 
-    func tasks() -> Observable<Results<Task>> {
+    func tasks(in list: TaskList) -> Observable<Results<Task>> {
         let result = withRealm("Getting Tasks") { (realm) -> Observable<Results<Task>> in
             let tasks = realm.objects(Task.self)
             return Observable.collection(from: tasks)

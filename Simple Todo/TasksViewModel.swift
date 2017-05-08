@@ -14,15 +14,20 @@ import Action
 typealias TaskSection = AnimatableSectionModel<String, Task>
 
 struct TasksViewModel {
-    let taskService: TaskServiceType
 
-    init(taskService: TaskServiceType) {
+    let taskService: TaskServiceType
+    let taskList: TaskList
+    fileprivate let sceneCoordinator: SceneCoordinatorType
+
+    init(taskService: TaskServiceType, taskList: TaskList, coordinator: SceneCoordinatorType) {
         self.taskService = taskService
+        self.taskList = taskList
+        self.sceneCoordinator = coordinator
         SoundService.shared.prepareSound(fileName: R.file.successWav.fullName)
     }
 
     var sectionedItems: Observable<[TaskSection]> {
-        return taskService.tasks().map { results in
+        return taskService.tasks(in: taskList).map { results in
             let completedTasks = results
                 .filter("completedDate != nil")
                 .sorted(byKeyPath: "added", ascending: false)
@@ -57,4 +62,10 @@ struct TasksViewModel {
             return self.taskService.create(task: task).map { _ in }
         }
     }
-}
+
+    func onPop() -> CocoaAction {
+        return CocoaAction {
+            self.sceneCoordinator.pop()
+        }
+    }
+ }

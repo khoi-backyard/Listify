@@ -44,7 +44,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             let taskService = try? TaskService(syncConfig: SyncConfiguration(user: user,
                                                                              realmURL: RealmConstants.syncServerURL)) {
 
-            let listViewModel = ListsViewModel(taskService: taskService)
+            let listViewModel = ListsViewModel(taskService: taskService, coordinator: sceneCoordinator)
             sceneCoordinator.transition(to: Scene.taskList(listViewModel), type: .root)
         } else {
             let userService = UserService()

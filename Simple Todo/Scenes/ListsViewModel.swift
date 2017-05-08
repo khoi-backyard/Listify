@@ -15,10 +15,13 @@ typealias ListsSection = AnimatableSectionModel<String, TaskList>
 
 struct ListsViewModel {
 
-    let taskService: TaskServiceType
+    fileprivate let taskService: TaskServiceType
+    fileprivate let sceneCoordinator: SceneCoordinatorType
 
-    init(taskService: TaskServiceType) {
+    init(taskService: TaskServiceType, coordinator: SceneCoordinatorType) {
         self.taskService = taskService
+        self.sceneCoordinator = coordinator
+
     }
 
     var sectionItems: Observable<[ListsSection]> {
@@ -30,4 +33,10 @@ struct ListsViewModel {
         })
     }
 
+    lazy var selectListAction: Action<TaskList, Void> = { this in
+        return Action { list -> Observable<Void> in
+            let taskViewModel = TasksViewModel(taskService: this.taskService, taskList: list, coordinator: this.sceneCoordinator)
+            return this.sceneCoordinator.transition(to: Scene.tasks(taskViewModel), type: .push)
+        }
+    }(self)
 }

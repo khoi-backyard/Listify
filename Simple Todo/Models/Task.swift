@@ -18,6 +18,7 @@ class Task: Object {
     dynamic var completedDate: Date?
     dynamic var reminderDate: Date?
     dynamic var dueDate: Date?
+    let list = LinkingObjects(fromType: TaskList.self, property: "items")
 
     override static func primaryKey() -> String? {
         return "id"

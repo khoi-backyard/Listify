@@ -23,6 +23,9 @@ class TasksViewController: UIViewController, Bindable {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        let backButton = UIBarButtonItem(title: "Back", style: .plain, target: nil, action: nil)
+        navigationItem.leftBarButtonItem = backButton
+
         tableView.rowHeight = 60
 
         configureDataSource()
@@ -34,6 +37,8 @@ class TasksViewController: UIViewController, Bindable {
             .addDisposableTo(rx_disposeBag)
 
         addTaskBtn.rx.action = viewModel.onCreate()
+        navigationItem.leftBarButtonItem?.rx.action = viewModel.onPop()
+        
     }
 
     fileprivate func configureDataSource() {

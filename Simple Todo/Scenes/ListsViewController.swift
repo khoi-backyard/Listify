@@ -27,6 +27,13 @@ class ListsViewController: UIViewController, Bindable {
         viewModel.sectionItems
             .bindTo(tableView.rx.items(dataSource: dataSource))
             .disposed(by: rx_disposeBag)
+
+        tableView.rx.itemSelected.map { indexPath in
+            try self.dataSource.model(at: indexPath) as! TaskList // swiftlint:disable:this force_cast
+        }
+        .subscribe(viewModel.selectListAction.inputs)
+        .disposed(by: rx_disposeBag)
+
     }
 
     fileprivate func configureDataSource() {
