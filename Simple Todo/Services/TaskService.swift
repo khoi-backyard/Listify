@@ -51,12 +51,6 @@ struct TaskService: TaskServiceType {
     func taskLists() -> Observable<Results<TaskList>> {
         let result = withRealm("Getting Task Lists") { (realm) -> Observable<Results<TaskList>> in
             let taskLists = realm.objects(TaskList.self)
-            if taskLists.isEmpty {
-                createTaskList(list: TaskList(value: [
-                    "id": RealmConstants.defaultListID,
-                    "name": RealmConstants.defaultListName
-                ]))
-            }
             return Observable.collection(from: taskLists)
         }
         return result ?? .empty()
@@ -74,16 +68,5 @@ struct TaskService: TaskServiceType {
             return .just(task)
         }
         return result ?? .error(TaskServiceError.toggleFailed(task))
-    }
-
-    @discardableResult
-    func createTaskList(list: TaskList) -> Observable<TaskList> {
-        let result = withRealm("Creating Task List") { realm -> Observable<TaskList> in
-            try realm.write {
-                realm.add(list)
-            }
-            return .just(list)
-        }
-        return result ?? .error(TaskServiceError.creationFailed)
     }
 }

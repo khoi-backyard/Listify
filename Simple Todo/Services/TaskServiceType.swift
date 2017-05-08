@@ -22,5 +22,4 @@ protocol TaskServiceType {
     func toggle(task: Task) -> Observable<Task>
 
     func taskLists() -> Observable<Results<TaskList>>
-    func createTaskList(list: TaskList) -> Observable<TaskList>
 }
