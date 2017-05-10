@@ -27,6 +27,7 @@ struct AuthenticationViewModel {
         return CocoaAction { _ in
             return Observable.just("")
                 .do(onNext: { _ in
+                    GIDSignIn.sharedInstance().signOut()
                     GIDSignIn.sharedInstance().signIn()
                 })
                 .flatMap { (_) in

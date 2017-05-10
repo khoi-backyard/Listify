@@ -17,6 +17,8 @@ class ListsViewController: UIViewController, Bindable {
     let dataSource = RxTableViewSectionedAnimatedDataSource<ListsSection>()
 
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var logoutBtn: UIBarButtonItem!
+    @IBOutlet weak var addBtn: UIBarButtonItem!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,6 +36,7 @@ class ListsViewController: UIViewController, Bindable {
         .subscribe(viewModel.selectListAction.inputs)
         .disposed(by: rx_disposeBag)
 
+        logoutBtn.rx.action = viewModel.onLogOut
     }
 
     fileprivate func configureDataSource() {

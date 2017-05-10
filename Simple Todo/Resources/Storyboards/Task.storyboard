@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="1q3-AP-76D">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="1q3-AP-76D">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -70,8 +70,13 @@
                             <constraint firstAttribute="trailing" secondItem="zGS-Mv-Ca5" secondAttribute="trailing" id="iYz-DJ-KdK"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="List" id="knU-dc-9i8"/>
+                    <navigationItem key="navigationItem" title="List" id="knU-dc-9i8">
+                        <barButtonItem key="leftBarButtonItem" title="Log out" id="5rd-L0-l8t"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="Mde-p9-eZC"/>
+                    </navigationItem>
                     <connections>
+                        <outlet property="addBtn" destination="Mde-p9-eZC" id="Z3S-NP-2O0"/>
+                        <outlet property="logoutBtn" destination="5rd-L0-l8t" id="9Rd-ve-oBZ"/>
                         <outlet property="tableView" destination="zGS-Mv-Ca5" id="Vap-Y8-eND"/>
                     </connections>
                 </viewController>

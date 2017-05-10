@@ -26,6 +26,6 @@ class TaskList: Object {
 
 extension TaskList: IdentifiableType {
     var identity: String {
-        return self.isInvalidated ? "" : id
+        return self.isInvalidated ? UUID().uuidString : id
     }
 }
