@@ -10,11 +10,13 @@ import UIKit
 import RxSwift
 import RxDataSources
 import Action
+import Fakery
 
 class ListsViewController: UIViewController, Bindable {
 
     var viewModel: ListsViewModel!
     let dataSource = RxTableViewSectionedAnimatedDataSource<ListsSection>()
+    private let faker = Faker()
 
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var logoutBtn: UIBarButtonItem!
@@ -37,6 +39,10 @@ class ListsViewController: UIViewController, Bindable {
         .disposed(by: rx_disposeBag)
 
         logoutBtn.rx.action = viewModel.onLogOut
+
+        addBtn.rx.bindTo(action: viewModel.onCreateList) { [unowned self] _ in
+            self.faker.commerce.department()
+        }
     }
 
     fileprivate func configureDataSource() {

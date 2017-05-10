@@ -23,6 +23,9 @@ target 'Simple Todo' do
     pod 'Fabric'
     pod 'Crashlytics'
     pod 'Google/SignIn'
+
+    pod 'Fakery'
+
 end
 
 

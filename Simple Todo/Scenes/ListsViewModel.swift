@@ -39,4 +39,20 @@ struct ListsViewModel {
             return this.sceneCoordinator.transition(to: Scene.tasks(taskViewModel), type: .push)
         }
     }(self)
+
+    lazy var onLogOut: CocoaAction = { this in
+        return CocoaAction {
+            let userService = UserService()
+            let authenticationViewModel = AuthenticationViewModel(coordinator: this.sceneCoordinator, userService: userService)
+            let authenticationScene = Scene.authentication(authenticationViewModel)
+            return this.sceneCoordinator.transition(to: authenticationScene, type: .root)
+        }
+    }(self)
+
+    lazy var onCreateList: Action<String, Void> = { this in
+        return Action { listName in
+            let list = TaskList(value: ["name": listName])
+            return this.taskService.createTaskList(list: list).map { _ in }
+        }
+    }(self)
 }
