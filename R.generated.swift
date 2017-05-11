@@ -56,8 +56,10 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
   
-  /// This `R.image` struct is generated, and contains static references to 4 images.
+  /// This `R.image` struct is generated, and contains static references to 5 images.
   struct image {
+    /// Image `calendar`.
+    static let calendar = Rswift.ImageResource(bundle: R.hostingBundle, name: "calendar")
     /// Image `checkmark-checked`.
     static let checkmarkChecked = Rswift.ImageResource(bundle: R.hostingBundle, name: "checkmark-checked")
     /// Image `checkmark-unchecked`.
@@ -66,6 +68,11 @@ struct R: Rswift.Validatable {
     static let googleLogo = Rswift.ImageResource(bundle: R.hostingBundle, name: "google-logo")
     /// Image `list-icon`.
     static let listIcon = Rswift.ImageResource(bundle: R.hostingBundle, name: "list-icon")
+    
+    /// `UIImage(named: "calendar", bundle: ..., traitCollection: ...)`
+    static func calendar(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.calendar, compatibleWith: traitCollection)
+    }
     
     /// `UIImage(named: "checkmark-checked", bundle: ..., traitCollection: ...)`
     static func checkmarkChecked(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
