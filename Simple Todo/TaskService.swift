@@ -29,10 +29,10 @@ struct TaskService: TaskServiceType {
         }
     }
 
-    func create(task: Task) -> Observable<Task> {
+    func create(task: Task, in list: TaskList) -> Observable<Task> {
         let result = withRealm("Creating Task") { (realm) -> Observable<Task> in
             try realm.write {
-                realm.add(task)
+                list.items.append(task)
             }
             return .just(task)
         }
@@ -42,7 +42,7 @@ struct TaskService: TaskServiceType {
 
     func tasks(in list: TaskList) -> Observable<Results<Task>> {
         let result = withRealm("Getting Tasks") { (realm) -> Observable<Results<Task>> in
-            let tasks = realm.objects(Task.self)
+            let tasks = list.items.sorted(byKeyPath: "dueDate", ascending: true)
             return Observable.collection(from: tasks)
         }
         return result ?? .empty()

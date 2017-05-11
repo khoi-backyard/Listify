@@ -17,7 +17,7 @@ enum TaskServiceError: Error {
 }
 
 protocol TaskServiceType {
-    func create(task: Task) -> Observable<Task>
+    func create(task: Task, in list: TaskList) -> Observable<Task>
     func tasks(in list: TaskList) -> Observable<Results<Task>>
     func toggle(task: Task) -> Observable<Task>
 
