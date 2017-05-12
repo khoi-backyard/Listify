@@ -20,12 +20,11 @@ target 'Simple Todo' do
     pod 'R.swift'
     pod 'SwiftyBeaver'
 
-    pod 'Fabric'
-    pod 'Crashlytics'
     pod 'Google/SignIn'
 
     pod 'Fakery'
 
+    pod 'Firebase/Core'
 end
 
 

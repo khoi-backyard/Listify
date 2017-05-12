@@ -9,10 +9,9 @@
 import UIKit
 import NSObject_Rx
 import SwiftyBeaver
-import Fabric
-import Crashlytics
 import NSObject_Rx
 import RealmSwift
+import Firebase
 
 let log = SwiftyBeaver.self
 
@@ -24,11 +23,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication,
                      didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey : Any]? = nil) -> Bool {
 
+        FIRApp.configure()
+
         //Configure some dependencies
         let console = ConsoleDestination()
         log.addDestination(console)
-
-        Fabric.with([Crashlytics.self])
 
         var configureError: NSError?
         GGLContext.sharedInstance().configureWithError(&configureError)
