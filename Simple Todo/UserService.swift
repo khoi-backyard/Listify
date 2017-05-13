@@ -32,4 +32,11 @@ struct UserService {
             return Disposables.create()
         }
     }
+
+    func logOut() {
+        GIDSignIn.sharedInstance().signOut()
+        SyncUser.all.values.forEach{
+            $0.logOut()
+        }
+    }
 }

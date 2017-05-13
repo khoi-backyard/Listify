@@ -41,6 +41,10 @@ class TasksViewController: UIViewController, Bindable {
         
     }
 
+    deinit {
+        
+    }
+
     fileprivate func configureDataSource() {
         dataSource.titleForHeaderInSection = { dataSource, index in
             dataSource.sectionModels[index].model

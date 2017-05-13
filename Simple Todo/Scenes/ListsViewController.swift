@@ -45,6 +45,10 @@ class ListsViewController: UIViewController, Bindable {
         }
     }
 
+    deinit {
+
+    }
+    
     fileprivate func configureDataSource() {
         dataSource.configureCell = { dataSource, tableView, indexPath, item in
             guard let cell = tableView.dequeueReusableCell(withIdentifier: R.reuseIdentifier.taskListsCell.identifier,
