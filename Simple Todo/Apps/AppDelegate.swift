@@ -37,19 +37,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.makeKeyAndVisible()
 
-        let sceneCoordinator = SceneCoordinator(window: window!)
+        let userService = UserService()
+        let sceneCoordinator = SceneCoordinator(window: window!, userService: userService)
 
         if let user = SyncUser.current,
             let taskService = try? TaskService(syncConfig: SyncConfiguration(user: user,
                                                                              realmURL: RealmConstants.syncServerURL)) {
-
             let listViewModel = ListsViewModel(taskService: taskService, coordinator: sceneCoordinator)
             sceneCoordinator.transition(to: Scene.taskList(listViewModel), type: .root)
         } else {
-            let userService = UserService()
-            let authenticationViewModel = AuthenticationViewModel(coordinator: sceneCoordinator, userService: userService)
-            let authenticationScene = Scene.authentication(authenticationViewModel)
-            sceneCoordinator.transition(to: authenticationScene, type: .root)
+            sceneCoordinator.showAuthentication()
         }
 
         return true

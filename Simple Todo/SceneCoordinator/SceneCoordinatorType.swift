@@ -10,12 +10,18 @@ import Foundation
 import RxSwift
 
 protocol SceneCoordinatorType {
-    init(window: UIWindow)
+    init(window: UIWindow, userService: UserService)
+
+    var userService: UserService { get }
 
     @discardableResult
     func transition(to: Scene, type: SceneTransitionType) -> Observable<Void> // swiftlint:disable:this variable_name
 
+    @discardableResult
     func pop(animated: Bool) -> Observable<Void>
+
+    @discardableResult
+    func showAuthentication() -> Observable<Void>
 }
 
 extension SceneCoordinatorType {

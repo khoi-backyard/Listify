@@ -35,7 +35,7 @@ struct UserService {
 
     func logOut() {
         GIDSignIn.sharedInstance().signOut()
-        SyncUser.all.values.forEach{
+        SyncUser.all.values.forEach {
             $0.logOut()
         }
     }

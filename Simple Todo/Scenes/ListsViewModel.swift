@@ -42,10 +42,7 @@ struct ListsViewModel {
 
     lazy var onLogOut: CocoaAction = { this in
         return CocoaAction {
-            let userService = UserService()
-            let authenticationViewModel = AuthenticationViewModel(coordinator: this.sceneCoordinator, userService: userService)
-            let authenticationScene = Scene.authentication(authenticationViewModel)
-            return this.sceneCoordinator.transition(to: authenticationScene, type: .root)
+            return this.sceneCoordinator.showAuthentication()
         }
     }(self)
 

@@ -11,12 +11,15 @@ import RxSwift
 import RxCocoa
 
 class SceneCoordinator: SceneCoordinatorType {
+
     private var window: UIWindow
     private var currentViewController: UIViewController?
+    var userService: UserService
 
-    required init(window: UIWindow) {
+    required init(window: UIWindow, userService: UserService) {
         self.window = window
         currentViewController = window.rootViewController
+        self.userService = userService
     }
 
     static func actualViewController(for viewController: UIViewController) -> UIViewController {
@@ -25,6 +28,13 @@ class SceneCoordinator: SceneCoordinatorType {
         } else {
             return viewController
         }
+    }
+
+    @discardableResult
+    func showAuthentication() -> Observable<Void> {
+        let authenticationViewModel = AuthenticationViewModel(coordinator: self, userService: userService)
+        let authenticationScene = Scene.authentication(authenticationViewModel)
+        return transition(to: authenticationScene, type: .root)
     }
 
     @discardableResult
@@ -57,6 +67,7 @@ class SceneCoordinator: SceneCoordinatorType {
             .ignoreElements()
     }
 
+    @discardableResult
     func pop(animated: Bool) -> Observable<Void> {
         let subject = PublishSubject<Void>()
         if let presenter = currentViewController?.presentingViewController {
