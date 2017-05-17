@@ -53,7 +53,7 @@ class SceneCoordinator: SceneCoordinatorType {
             _ = navigationController.rx.delegate
                 .sentMessage(#selector(UINavigationControllerDelegate.navigationController(_:didShow:animated:)))
                 .map { _ in }
-                .bindTo(subject)
+                .bind(to: subject)
             navigationController.pushViewController(viewController, animated: true)
             currentViewController = SceneCoordinator.actualViewController(for: viewController)
         case .modal:
@@ -80,7 +80,7 @@ class SceneCoordinator: SceneCoordinatorType {
             _ = navigationController.rx.delegate
                 .sentMessage(#selector(UINavigationControllerDelegate.navigationController(_:didShow:animated:)))
                 .map { _ in }
-                .bindTo(subject)
+                .bind(to: subject)
             guard navigationController.popViewController(animated: animated) != nil else {
                 fatalError("can't navigate back from \(String(describing: currentViewController))")
             }

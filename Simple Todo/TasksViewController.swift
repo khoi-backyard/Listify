@@ -33,16 +33,16 @@ class TasksViewController: UIViewController, Bindable {
 
     func bindViewModel() {
         viewModel.sectionedItems
-            .bindTo(tableView.rx.items(dataSource: dataSource))
+            .bind(to: tableView.rx.items(dataSource: dataSource))
             .addDisposableTo(rx_disposeBag)
 
         addTaskBtn.rx.action = viewModel.onCreate()
         navigationItem.leftBarButtonItem?.rx.action = viewModel.onPop()
-        
+
     }
 
     deinit {
-        
+
     }
 
     fileprivate func configureDataSource() {

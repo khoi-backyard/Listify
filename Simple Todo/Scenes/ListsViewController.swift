@@ -29,7 +29,7 @@ class ListsViewController: UIViewController, Bindable {
 
     func bindViewModel() {
         viewModel.sectionItems
-            .bindTo(tableView.rx.items(dataSource: dataSource))
+            .bind(to: tableView.rx.items(dataSource: dataSource))
             .disposed(by: rx_disposeBag)
 
         tableView.rx.itemSelected.map { indexPath in
@@ -40,7 +40,7 @@ class ListsViewController: UIViewController, Bindable {
 
         logoutBtn.rx.action = viewModel.onLogOut
 
-        addBtn.rx.bindTo(action: viewModel.onCreateList) { [unowned self] _ in
+        addBtn.rx.bind(to: viewModel.onCreateList) { [unowned self] _ in
             self.faker.commerce.department()
         }
     }
@@ -48,7 +48,7 @@ class ListsViewController: UIViewController, Bindable {
     deinit {
 
     }
-    
+
     fileprivate func configureDataSource() {
         dataSource.configureCell = { dataSource, tableView, indexPath, item in
             guard let cell = tableView.dequeueReusableCell(withIdentifier: R.reuseIdentifier.taskListsCell.identifier,
