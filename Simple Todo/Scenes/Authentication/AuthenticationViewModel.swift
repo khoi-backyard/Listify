@@ -53,6 +53,7 @@ struct AuthenticationViewModel {
                     }
                 }
 
+                .take(1)
         }
     }
 }
