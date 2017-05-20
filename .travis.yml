@@ -8,7 +8,7 @@ notifications:
 
 before_install:
     - gem update fastlane --no-ri --no-rdoc --no-document
-    - pod repo update --silent
+    - pod repo update
 
 install:
     - cat ./Podfile
