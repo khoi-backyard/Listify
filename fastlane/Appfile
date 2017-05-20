@@ -1,4 +1,4 @@
-app_identifier "io.khoi.Simple-Todo" # The bundle identifier of your app
+app_identifier "io.khoi.Listify" # The bundle identifier of your app
 apple_id "khoi.javascript@gmail.com" # Your Apple email address
 
 team_id "7G5K6NH4YV"  # Developer Portal Team ID

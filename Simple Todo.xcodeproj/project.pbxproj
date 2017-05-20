@@ -46,19 +46,15 @@
 		7CE31CF21E8B86F900874284 /* NibLoadableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CE31CF11E8B86F900874284 /* NibLoadableView.swift */; };
 		891B0A6B77259CBADAAF2F71 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 4257E5BF74C9A468E9780CEE /* Settings.bundle */; };
 		9FBE8EA893A9AAC6F142D6A9 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6389A5B4C5BD8CDF73E74F2F /* Images.xcassets */; };
-		F643C8D3C494C675D5ECCAAC /* Pods_Simple_Todo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CF126DB9D01846CE974603A /* Pods_Simple_Todo.framework */; };
+		DC794631A7A78579AA917E59 /* Pods_Listify.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 835947EE9AFA3852D35F7B7E /* Pods_Listify.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		0708162F9C176957B0AAADF7 /* Pods-unit_tests-UnitTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-unit_tests-UnitTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-unit_tests-UnitTests/Pods-unit_tests-UnitTests.release.xcconfig"; sourceTree = "<group>"; };
 		1B7500DBEC8AC66373E3CE70 /* LaunchScreen.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; path = LaunchScreen.xib; sourceTree = "<group>"; };
-		2CF126DB9D01846CE974603A /* Pods_Simple_Todo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Simple_Todo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4257E5BF74C9A468E9780CEE /* Settings.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
-		45A4F37304134740156BC411 /* Simple Todo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Simple Todo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		61B8A8610ADEDB85F7D219A5 /* Pods-unit_tests-UnitTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-unit_tests-UnitTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-unit_tests-UnitTests/Pods-unit_tests-UnitTests.debug.xcconfig"; sourceTree = "<group>"; };
+		45A4F37304134740156BC411 /* Listify.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Listify.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6389A5B4C5BD8CDF73E74F2F /* Images.xcassets */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		647F8725AC73C9C3A3979F62 /* AppDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		799FD0F1AC177C5234E49A1F /* Pods-Simple Todo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Simple Todo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Simple Todo/Pods-Simple Todo.debug.xcconfig"; sourceTree = "<group>"; };
 		7C016C491EAE060E00C638D2 /* TaskService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskService.swift; sourceTree = "<group>"; };
 		7C016C4B1EAE0C2D00C638D2 /* TaskServiceType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskServiceType.swift; sourceTree = "<group>"; };
 		7C016C4D1EAE0D0900C638D2 /* TasksViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TasksViewController.swift; path = "Simple Todo/TasksViewController.swift"; sourceTree = SOURCE_ROOT; };
@@ -94,9 +90,10 @@
 		7CDADB321E7BDBF20062C93E /* TaskList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskList.swift; sourceTree = "<group>"; };
 		7CDADB381E7C11BD0062C93E /* AppSetup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppSetup.swift; sourceTree = "<group>"; };
 		7CE31CF11E8B86F900874284 /* NibLoadableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NibLoadableView.swift; sourceTree = "<group>"; };
+		835947EE9AFA3852D35F7B7E /* Pods_Listify.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Listify.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		865485C93876D8207D8FE49C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		BF6D64B523CB4C20F96C2F46 /* Pods_unit_tests_UnitTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_unit_tests_UnitTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		E6955EF80FAC21E9673B2525 /* Pods-Simple Todo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Simple Todo.release.xcconfig"; path = "Pods/Target Support Files/Pods-Simple Todo/Pods-Simple Todo.release.xcconfig"; sourceTree = "<group>"; };
+		94BCCDDED63620B01B1B2B2F /* Pods-Listify.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Listify.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Listify/Pods-Listify.debug.xcconfig"; sourceTree = "<group>"; };
+		CDE97D714DB6989D7DAE04E2 /* Pods-Listify.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Listify.release.xcconfig"; path = "Pods/Target Support Files/Pods-Listify/Pods-Listify.release.xcconfig"; sourceTree = "<group>"; };
 		F800C0519DEF5B16C5F1ECFF /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -106,7 +103,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				727966BFDEF3124DAE9381C1 /* Foundation.framework in Frameworks */,
-				F643C8D3C494C675D5ECCAAC /* Pods_Simple_Todo.framework in Frameworks */,
+				DC794631A7A78579AA917E59 /* Pods_Listify.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -118,17 +115,6 @@
 			children = (
 			);
 			path = Views;
-			sourceTree = "<group>";
-		};
-		0FD5CE0385E4FF8F89F39D24 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				E6955EF80FAC21E9673B2525 /* Pods-Simple Todo.release.xcconfig */,
-				799FD0F1AC177C5234E49A1F /* Pods-Simple Todo.debug.xcconfig */,
-				0708162F9C176957B0AAADF7 /* Pods-unit_tests-UnitTests.release.xcconfig */,
-				61B8A8610ADEDB85F7D219A5 /* Pods-unit_tests-UnitTests.debug.xcconfig */,
-			);
-			name = Pods;
 			sourceTree = "<group>";
 		};
 		220175C00881D15DDC20ED03 /* Simple Todo */ = {
@@ -158,6 +144,15 @@
 			path = Protocols;
 			sourceTree = "<group>";
 		};
+		36AB835BD1DFC576FFF4EE65 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				CDE97D714DB6989D7DAE04E2 /* Pods-Listify.release.xcconfig */,
+				94BCCDDED63620B01B1B2B2F /* Pods-Listify.debug.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		419805E93077BCD27A8EDC51 /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
@@ -182,8 +177,7 @@
 			isa = PBXGroup;
 			children = (
 				AADADE3C670D141A3F400FC8 /* iOS */,
-				2CF126DB9D01846CE974603A /* Pods_Simple_Todo.framework */,
-				BF6D64B523CB4C20F96C2F46 /* Pods_unit_tests_UnitTests.framework */,
+				835947EE9AFA3852D35F7B7E /* Pods_Listify.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -192,10 +186,10 @@
 			isa = PBXGroup;
 			children = (
 				5597AAAFA6B5C575AC022FD5 /* Frameworks */,
-				0FD5CE0385E4FF8F89F39D24 /* Pods */,
 				826ED14F2AFDAC3C976279E4 /* Products */,
 				220175C00881D15DDC20ED03 /* Simple Todo */,
 				7C2B4E261E8A0FD500DD59BC /* R.generated.swift */,
+				36AB835BD1DFC576FFF4EE65 /* Pods */,
 			);
 			indentWidth = 4;
 			sourceTree = "<group>";
@@ -294,7 +288,7 @@
 		826ED14F2AFDAC3C976279E4 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				45A4F37304134740156BC411 /* Simple Todo.app */,
+				45A4F37304134740156BC411 /* Listify.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -350,26 +344,27 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		C6326674E7623DC7A34ACE2D /* Simple Todo */ = {
+		C6326674E7623DC7A34ACE2D /* Listify */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 5AE1C82DBECF995BEF4A9AF4 /* Build configuration list for PBXNativeTarget "Simple Todo" */;
+			buildConfigurationList = 5AE1C82DBECF995BEF4A9AF4 /* Build configuration list for PBXNativeTarget "Listify" */;
 			buildPhases = (
-				1D7F22F31682DE1ABBE9AD30 /* [CP] Check Pods Manifest.lock */,
+				8C4C27798F400E6FB328EAAB /* [CP] Check Pods Manifest.lock */,
 				7C2B4E251E8A0FA700DD59BC /* R.swift Generator */,
 				C11E27344DA8EFAF3B9DA985 /* Sources */,
 				B1203A0EDF46476385198E43 /* Frameworks */,
 				F0F63EAD04475AA810BFB263 /* Resources */,
-				85D4B0E3D8393E652A8CAB86 /* [CP] Embed Pods Frameworks */,
-				1A3F11476D6AC81C3BC765A7 /* [CP] Copy Pods Resources */,
 				7CDADB3C1E7C13300062C93E /* SwiftLint */,
+				804E9BF5C34CE55A9A6B60FC /* [CP] Embed Pods Frameworks */,
+				26DBD7FBDD09612791FDF19E /* [CP] Copy Pods Resources */,
+				7C017A581ED04B3D00EA5E07 /* Crashlytics */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = "Simple Todo";
+			name = Listify;
 			productName = "Simple Todo";
-			productReference = 45A4F37304134740156BC411 /* Simple Todo.app */;
+			productReference = 45A4F37304134740156BC411 /* Listify.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -402,7 +397,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				C6326674E7623DC7A34ACE2D /* Simple Todo */,
+				C6326674E7623DC7A34ACE2D /* Listify */,
 			);
 		};
 /* End PBXProject section */
@@ -425,7 +420,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		1A3F11476D6AC81C3BC765A7 /* [CP] Copy Pods Resources */ = {
+		26DBD7FBDD09612791FDF19E /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -437,23 +432,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Simple Todo/Pods-Simple Todo-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Listify/Pods-Listify-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		1D7F22F31682DE1ABBE9AD30 /* [CP] Check Pods Manifest.lock */ = {
+		7C017A581ED04B3D00EA5E07 /* Crashlytics */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "[CP] Check Pods Manifest.lock";
+			name = Crashlytics;
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
+			shellScript = "\"${PODS_ROOT}/Fabric/run\" 7278ab7e44447c45d875ffc250de48bffa5d35e8 432f0055a61cc7eed796413b4239b55ec8dc3bba0298e9c35d6b9361b371d41f";
 		};
 		7C2B4E251E8A0FA700DD59BC /* R.swift Generator */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -483,7 +477,7 @@
 			shellPath = /bin/sh;
 			shellScript = "if which swiftlint >/dev/null; then\nswiftlint\nelse\necho \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi";
 		};
-		85D4B0E3D8393E652A8CAB86 /* [CP] Embed Pods Frameworks */ = {
+		804E9BF5C34CE55A9A6B60FC /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -495,7 +489,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Simple Todo/Pods-Simple Todo-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Listify/Pods-Listify-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8C4C27798F400E6FB328EAAB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -606,7 +615,7 @@
 		};
 		B5370D1308DFC3EB80B0C165 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 799FD0F1AC177C5234E49A1F /* Pods-Simple Todo.debug.xcconfig */;
+			baseConfigurationReference = 94BCCDDED63620B01B1B2B2F /* Pods-Listify.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -619,10 +628,10 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = "io.khoi.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_BUNDLE_IDENTIFIER = io.khoi.Listify;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "186944ef-62f3-4ffe-9d8a-b6c8204ec303";
-				PROVISIONING_PROFILE_SPECIFIER = "match Development io.khoi.Simple-Todo";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = iphoneos;
 				SWIFT_OBJC_BRIDGING_HEADER = "Simple Todo/Resources/Simple Todo-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -689,7 +698,7 @@
 		};
 		EEBD3DAA2B4219BE500D879B /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E6955EF80FAC21E9673B2525 /* Pods-Simple Todo.release.xcconfig */;
+			baseConfigurationReference = CDE97D714DB6989D7DAE04E2 /* Pods-Listify.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -703,10 +712,10 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_BUNDLE_IDENTIFIER = "io.khoi.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_BUNDLE_IDENTIFIER = io.khoi.Listify;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "e32f9ad2-31db-4ef8-84ca-2bdcb63e01bf";
-				PROVISIONING_PROFILE_SPECIFIER = "match AdHoc io.khoi.Simple-Todo";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "match AdHoc io.khoi.Listify";
 				SDKROOT = iphoneos;
 				SWIFT_OBJC_BRIDGING_HEADER = "Simple Todo/Resources/Simple Todo-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
@@ -726,7 +735,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		5AE1C82DBECF995BEF4A9AF4 /* Build configuration list for PBXNativeTarget "Simple Todo" */ = {
+		5AE1C82DBECF995BEF4A9AF4 /* Build configuration list for PBXNativeTarget "Listify" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				EEBD3DAA2B4219BE500D879B /* Release */,

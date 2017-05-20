@@ -15,8 +15,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "C6326674E7623DC7A34ACE2D"
-               BuildableName = "Simple Todo.app"
-               BlueprintName = "Simple Todo"
+               BuildableName = "Listify.app"
+               BlueprintName = "Listify"
                ReferencedContainer = "container:Simple Todo.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -28,23 +28,13 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "395D3A087E41F714997D2EB4"
-               BuildableName = "UnitTests.xctest"
-               BlueprintName = "UnitTests"
-               ReferencedContainer = "container:Simple Todo.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "C6326674E7623DC7A34ACE2D"
-            BuildableName = "Simple Todo.app"
-            BlueprintName = "Simple Todo"
+            BuildableName = "Listify.app"
+            BlueprintName = "Listify"
             ReferencedContainer = "container:Simple Todo.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -66,8 +56,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "C6326674E7623DC7A34ACE2D"
-            BuildableName = "Simple Todo.app"
-            BlueprintName = "Simple Todo"
+            BuildableName = "Listify.app"
+            BlueprintName = "Listify"
             ReferencedContainer = "container:Simple Todo.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -85,8 +75,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "C6326674E7623DC7A34ACE2D"
-            BuildableName = "Simple Todo.app"
-            BlueprintName = "Simple Todo"
+            BuildableName = "Listify.app"
+            BlueprintName = "Listify"
             ReferencedContainer = "container:Simple Todo.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>

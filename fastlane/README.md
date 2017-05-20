@@ -27,6 +27,7 @@ xcode-select --install
 <td width="33%"><code>sudo gem install fastlane -NV</code></td>
 </tr>
 </table>
+
 # Available Actions
 ## iOS
 ### ios beta
@@ -34,24 +35,9 @@ xcode-select --install
 fastlane ios beta
 ```
 Submit build to crashlytics
-### ios add_device
+### ios fetch_certificates_provs
 ```
-fastlane ios add_device
-```
-
-### ios bump
-```
-fastlane ios bump
-```
-Bump both version numbers
-### ios certificates
-```
-fastlane ios certificates
-```
-
-### ios refresh_profiles
-```
-fastlane ios refresh_profiles
+fastlane ios fetch_certificates_provs
 ```
 
 

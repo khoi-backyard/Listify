@@ -4,27 +4,30 @@ platform :ios, '9.0'
 
 use_frameworks!
 
-target 'Simple Todo' do
+target 'Listify' do
+    #Rx Stuff
     pod 'RxSwift',    '~> 3.0'
     pod 'RxCocoa',    '~> 3.0'
     pod 'NSObject+Rx'
-    pod 'RxRealm'
-    pod 'NSObject+Rx'
-    pod 'Result', '~> 3.0.0'
     pod 'Action'
     pod 'RxDataSources', '~> 1.0'
 
-    pod 'SnapKit', '~> 3.1.0'
+    #Realm
     pod 'RealmSwift'
+    pod 'RxRealm'
+
+    #Misc
+    pod 'Google/SignIn'
+    pod 'SnapKit', '~> 3.1.0'
     pod 'MBProgressHUD', '~> 1.0.0'
     pod 'R.swift'
     pod 'SwiftyBeaver'
-
-    pod 'Google/SignIn'
-
     pod 'Fakery'
+    pod 'Result', '~> 3.0.0'
 
-    pod 'Firebase/Core'
+    #Analytics & Deployment
+    pod 'Fabric'
+    pod 'Crashlytics'
 end
 
 
