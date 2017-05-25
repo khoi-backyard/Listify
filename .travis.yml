@@ -7,10 +7,10 @@ notifications:
     - cuongnt04230@gmail.com
 
 before_install:
-    - gem update fastlane --no-ri --no-rdoc --no-document
-    - pod repo update
+    - bundle exec pod repo update
 
 install:
     - cat ./Podfile
 
-script: ./build.sh
+script:
+    - bundle exec fastlane ios beta
