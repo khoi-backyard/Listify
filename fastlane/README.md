@@ -35,11 +35,6 @@ xcode-select --install
 fastlane ios beta
 ```
 Submit build to crashlytics
-### ios fetch_certificates_provs
-```
-fastlane ios fetch_certificates_provs
-```
-
 
 ----
 

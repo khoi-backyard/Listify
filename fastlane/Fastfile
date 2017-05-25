@@ -41,7 +41,13 @@ platform :ios do
     increment_version_number :version_number => version_number
     increment_build_number :build_number => number_of_commits
 
-    fetch_certificates_provs
+    match(
+      app_identifier: APP_BUNDLE_IDENTIFIER, 
+      type: "adhoc",
+      keychain_name: KEYCHAIN_NAME,
+      keychain_password: KEYCHAIN_PASSWORD,
+      readonly: true
+    )
     
     gym :scheme => SCHEME_NAME
 
@@ -56,32 +62,6 @@ platform :ios do
     upload_symbols_to_crashlytics
   end
 
-  lane :fetch_certificates_provs do
-    match(
-      app_identifier: APP_BUNDLE_IDENTIFIER, 
-      type: "development",
-      keychain_name: KEYCHAIN_NAME,
-      keychain_password: KEYCHAIN_PASSWORD,
-      readonly: true
-    )
-
-    match(
-      app_identifier: APP_BUNDLE_IDENTIFIER, 
-      type: "adhoc",
-      keychain_name: KEYCHAIN_NAME,
-      keychain_password: KEYCHAIN_PASSWORD,
-      readonly: true
-    )
-
-    match(
-      app_identifier: APP_BUNDLE_IDENTIFIER, 
-      type: "appstore",
-      keychain_name: KEYCHAIN_NAME,
-      keychain_password: KEYCHAIN_PASSWORD,
-      readonly: true
-    )
-  end
-
   private_lane :setup_ci_env do
     create_keychain(
       name: KEYCHAIN_NAME,
@@ -92,7 +72,7 @@ platform :ios do
       add_to_search_list: true
     )
   end
-  
+
   #After All
   after_all do |lane|
     notification(subtitle: "Success", message: "Lane #{lane} completed successfully!")
