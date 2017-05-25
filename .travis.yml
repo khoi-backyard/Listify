@@ -7,7 +7,7 @@ notifications:
     - cuongnt04230@gmail.com
 
 before_install:
-    - bundle exec pod repo update
+    - bundle install
 
 install:
     - cat ./Podfile
