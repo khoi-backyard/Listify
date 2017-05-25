@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		412C7C1786E0D7538E74FBAA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 647F8725AC73C9C3A3979F62 /* AppDelegate.swift */; };
+		5070912733BC0C08F49B6905 /* Pods_Listify.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55C886A6770C4AFBDD7A0FF3 /* Pods_Listify.framework */; };
 		727966BFDEF3124DAE9381C1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 865485C93876D8207D8FE49C /* Foundation.framework */; };
 		75FC251101B647FC5C3ED1AF /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1B7500DBEC8AC66373E3CE70 /* LaunchScreen.xib */; };
 		7C016C4A1EAE060E00C638D2 /* TaskService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C016C491EAE060E00C638D2 /* TaskService.swift */; };
@@ -46,20 +47,20 @@
 		7CE31CF21E8B86F900874284 /* NibLoadableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CE31CF11E8B86F900874284 /* NibLoadableView.swift */; };
 		891B0A6B77259CBADAAF2F71 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 4257E5BF74C9A468E9780CEE /* Settings.bundle */; };
 		9FBE8EA893A9AAC6F142D6A9 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6389A5B4C5BD8CDF73E74F2F /* Images.xcassets */; };
-		DC794631A7A78579AA917E59 /* Pods_Listify.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 835947EE9AFA3852D35F7B7E /* Pods_Listify.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		1B7500DBEC8AC66373E3CE70 /* LaunchScreen.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; path = LaunchScreen.xib; sourceTree = "<group>"; };
 		4257E5BF74C9A468E9780CEE /* Settings.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		45A4F37304134740156BC411 /* Listify.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Listify.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		55C886A6770C4AFBDD7A0FF3 /* Pods_Listify.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Listify.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6389A5B4C5BD8CDF73E74F2F /* Images.xcassets */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		647F8725AC73C9C3A3979F62 /* AppDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7C016C491EAE060E00C638D2 /* TaskService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskService.swift; sourceTree = "<group>"; };
 		7C016C4B1EAE0C2D00C638D2 /* TaskServiceType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskServiceType.swift; sourceTree = "<group>"; };
-		7C016C4D1EAE0D0900C638D2 /* TasksViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TasksViewController.swift; path = "Simple Todo/TasksViewController.swift"; sourceTree = SOURCE_ROOT; };
-		7C016C4F1EAE0D5C00C638D2 /* TasksViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TasksViewModel.swift; path = "Simple Todo/TasksViewModel.swift"; sourceTree = SOURCE_ROOT; };
-		7C016C511EAE13AD00C638D2 /* TaskItemTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TaskItemTableViewCell.swift; path = "Simple Todo/TaskItemTableViewCell.swift"; sourceTree = SOURCE_ROOT; };
+		7C016C4D1EAE0D0900C638D2 /* TasksViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TasksViewController.swift; sourceTree = "<group>"; };
+		7C016C4F1EAE0D5C00C638D2 /* TasksViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TasksViewModel.swift; sourceTree = "<group>"; };
+		7C016C511EAE13AD00C638D2 /* TaskItemTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskItemTableViewCell.swift; sourceTree = "<group>"; };
 		7C0333911E8B6E3300982136 /* Reusable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reusable.swift; sourceTree = "<group>"; };
 		7C0333931E8B6E5D00982136 /* UITableView+Reusable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableView+Reusable.swift"; sourceTree = "<group>"; };
 		7C0333951E8B72DD00982136 /* UIColor+Hex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Hex.swift"; sourceTree = "<group>"; };
@@ -75,7 +76,7 @@
 		7C4F65261E8CE021006F4F1F /* AppConstant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppConstant.swift; sourceTree = "<group>"; };
 		7C86E5381E8270DD00E7A484 /* RealmConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmConstants.swift; sourceTree = "<group>"; };
 		7CB7A6141EA5C76C007CF930 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		7CB7A6161EA5C7EC007CF930 /* Simple Todo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Simple Todo-Bridging-Header.h"; sourceTree = "<group>"; };
+		7CB7A6161EA5C7EC007CF930 /* Listify-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Listify-Bridging-Header.h"; sourceTree = "<group>"; };
 		7CD27A681EA4C83B00B2A4EA /* Authentication.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Authentication.storyboard; sourceTree = "<group>"; };
 		7CD27A6B1EA4C87A00B2A4EA /* Scene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Scene.swift; sourceTree = "<group>"; };
 		7CD27A6D1EA4C8B700B2A4EA /* AuthenticationViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticationViewModel.swift; sourceTree = "<group>"; };
@@ -90,10 +91,9 @@
 		7CDADB321E7BDBF20062C93E /* TaskList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskList.swift; sourceTree = "<group>"; };
 		7CDADB381E7C11BD0062C93E /* AppSetup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppSetup.swift; sourceTree = "<group>"; };
 		7CE31CF11E8B86F900874284 /* NibLoadableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NibLoadableView.swift; sourceTree = "<group>"; };
-		835947EE9AFA3852D35F7B7E /* Pods_Listify.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Listify.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		865485C93876D8207D8FE49C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		94BCCDDED63620B01B1B2B2F /* Pods-Listify.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Listify.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Listify/Pods-Listify.debug.xcconfig"; sourceTree = "<group>"; };
-		CDE97D714DB6989D7DAE04E2 /* Pods-Listify.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Listify.release.xcconfig"; path = "Pods/Target Support Files/Pods-Listify/Pods-Listify.release.xcconfig"; sourceTree = "<group>"; };
+		BBD58C428C6CF3ADD1C26F54 /* Pods-Listify.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Listify.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Listify/Pods-Listify.debug.xcconfig"; sourceTree = "<group>"; };
+		BF20F25202102E02B3480CE2 /* Pods-Listify.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Listify.release.xcconfig"; path = "Pods/Target Support Files/Pods-Listify/Pods-Listify.release.xcconfig"; sourceTree = "<group>"; };
 		F800C0519DEF5B16C5F1ECFF /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -103,7 +103,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				727966BFDEF3124DAE9381C1 /* Foundation.framework in Frameworks */,
-				DC794631A7A78579AA917E59 /* Pods_Listify.framework in Frameworks */,
+				5070912733BC0C08F49B6905 /* Pods_Listify.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -117,10 +117,9 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
-		220175C00881D15DDC20ED03 /* Simple Todo */ = {
+		220175C00881D15DDC20ED03 /* Listify */ = {
 			isa = PBXGroup;
 			children = (
-				7C0EA1A81EA73F4800BC6250 /* Services */,
 				7C935E6B1E7BC362001C37A2 /* Apps */,
 				52B998222F59B86DCFE42CC4 /* Extensions */,
 				89E1ECA35DDBCC89C51F15FD /* Models */,
@@ -129,9 +128,10 @@
 				C36408C3275ED566BCD4BE9E /* Resources */,
 				7CD27A6A1EA4C86500B2A4EA /* SceneCoordinator */,
 				7CDADB2B1E7BD61E0062C93E /* Scenes */,
+				7C0EA1A81EA73F4800BC6250 /* Services */,
 				045BE939CB6BABA9CF176585 /* Views */,
 			);
-			path = "Simple Todo";
+			path = Listify;
 			sourceTree = "<group>";
 		};
 		2445C8A3A12D8020C96CC0EF /* Protocols */ = {
@@ -142,15 +142,6 @@
 				7C0333911E8B6E3300982136 /* Reusable.swift */,
 			);
 			path = Protocols;
-			sourceTree = "<group>";
-		};
-		36AB835BD1DFC576FFF4EE65 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				CDE97D714DB6989D7DAE04E2 /* Pods-Listify.release.xcconfig */,
-				94BCCDDED63620B01B1B2B2F /* Pods-Listify.debug.xcconfig */,
-			);
-			name = Pods;
 			sourceTree = "<group>";
 		};
 		419805E93077BCD27A8EDC51 /* Storyboards */ = {
@@ -165,10 +156,10 @@
 		52B998222F59B86DCFE42CC4 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				7C0EA1AF1EA75AED00BC6250 /* GIDSignIn+Rx.swift */,
 				7C0333951E8B72DD00982136 /* UIColor+Hex.swift */,
 				7CD27A771EA4D05A00B2A4EA /* UINavigationController+Rx.swift */,
 				7C0333931E8B6E5D00982136 /* UITableView+Reusable.swift */,
-				7C0EA1AF1EA75AED00BC6250 /* GIDSignIn+Rx.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -177,7 +168,7 @@
 			isa = PBXGroup;
 			children = (
 				AADADE3C670D141A3F400FC8 /* iOS */,
-				835947EE9AFA3852D35F7B7E /* Pods_Listify.framework */,
+				55C886A6770C4AFBDD7A0FF3 /* Pods_Listify.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -186,10 +177,10 @@
 			isa = PBXGroup;
 			children = (
 				5597AAAFA6B5C575AC022FD5 /* Frameworks */,
+				220175C00881D15DDC20ED03 /* Listify */,
+				7C6E192879B463CEBE001D57 /* Pods */,
 				826ED14F2AFDAC3C976279E4 /* Products */,
-				220175C00881D15DDC20ED03 /* Simple Todo */,
 				7C2B4E261E8A0FD500DD59BC /* R.generated.swift */,
-				36AB835BD1DFC576FFF4EE65 /* Pods */,
 			);
 			indentWidth = 4;
 			sourceTree = "<group>";
@@ -199,22 +190,22 @@
 		7C0EA1A81EA73F4800BC6250 /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				7C0EA1A91EA73F5400BC6250 /* UserService.swift */,
+				7C43BA5C1EAE4C94001018F9 /* SoundService.swift */,
 				7C016C491EAE060E00C638D2 /* TaskService.swift */,
 				7C016C4B1EAE0C2D00C638D2 /* TaskServiceType.swift */,
-				7C43BA5C1EAE4C94001018F9 /* SoundService.swift */,
+				7C0EA1A91EA73F5400BC6250 /* UserService.swift */,
 			);
-			name = Services;
+			path = Services;
 			sourceTree = "<group>";
 		};
 		7C23E3B31EAF50060062DCCB /* Lists */ = {
 			isa = PBXGroup;
 			children = (
+				7C23E3B81EAF54C20062DCCB /* ListsTableViewCell.swift */,
 				7C23E3B41EAF501A0062DCCB /* ListsViewController.swift */,
 				7C23E3B61EAF50420062DCCB /* ListsViewModel.swift */,
-				7C23E3B81EAF54C20062DCCB /* ListsTableViewCell.swift */,
 			);
-			name = Lists;
+			path = Lists;
 			sourceTree = "<group>";
 		};
 		7C43BA5E1EAE4E74001018F9 /* Sounds */ = {
@@ -222,7 +213,16 @@
 			children = (
 				7C43BA5F1EAE4E7F001018F9 /* success.wav */,
 			);
-			name = Sounds;
+			path = Sounds;
+			sourceTree = "<group>";
+		};
+		7C6E192879B463CEBE001D57 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				BF20F25202102E02B3480CE2 /* Pods-Listify.release.xcconfig */,
+				BBD58C428C6CF3ADD1C26F54 /* Pods-Listify.debug.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 		7C86E5371E8270B500E7A484 /* Realm */ = {
@@ -258,8 +258,8 @@
 		7CDADB2B1E7BD61E0062C93E /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
-				7C23E3B31EAF50060062DCCB /* Lists */,
 				7CDADB351E7BFE9E0062C93E /* Authentication */,
+				7C23E3B31EAF50060062DCCB /* Lists */,
 				7CDADB341E7BFE910062C93E /* Tasks */,
 			);
 			path = Scenes;
@@ -268,12 +268,11 @@
 		7CDADB341E7BFE910062C93E /* Tasks */ = {
 			isa = PBXGroup;
 			children = (
+				7C016C511EAE13AD00C638D2 /* TaskItemTableViewCell.swift */,
 				7C016C4D1EAE0D0900C638D2 /* TasksViewController.swift */,
 				7C016C4F1EAE0D5C00C638D2 /* TasksViewModel.swift */,
-				7C016C511EAE13AD00C638D2 /* TaskItemTableViewCell.swift */,
 			);
-			name = Tasks;
-			path = "Task List";
+			path = Tasks;
 			sourceTree = "<group>";
 		};
 		7CDADB351E7BFE9E0062C93E /* Authentication */ = {
@@ -313,14 +312,14 @@
 		C36408C3275ED566BCD4BE9E /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				7C43BA5E1EAE4E74001018F9 /* Sounds */,
 				DFA7B614A4C710D7BC34DC13 /* Nibs */,
 				CEDE38FE30D0C2E736890E36 /* Other-Sources */,
+				7C43BA5E1EAE4E74001018F9 /* Sounds */,
 				419805E93077BCD27A8EDC51 /* Storyboards */,
 				7CB7A6141EA5C76C007CF930 /* GoogleService-Info.plist */,
 				6389A5B4C5BD8CDF73E74F2F /* Images.xcassets */,
 				4257E5BF74C9A468E9780CEE /* Settings.bundle */,
-				7CB7A6161EA5C7EC007CF930 /* Simple Todo-Bridging-Header.h */,
+				7CB7A6161EA5C7EC007CF930 /* Listify-Bridging-Header.h */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -348,15 +347,15 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5AE1C82DBECF995BEF4A9AF4 /* Build configuration list for PBXNativeTarget "Listify" */;
 			buildPhases = (
-				8C4C27798F400E6FB328EAAB /* [CP] Check Pods Manifest.lock */,
+				B1D230B513613A6308AC1FB1 /* [CP] Check Pods Manifest.lock */,
 				7C2B4E251E8A0FA700DD59BC /* R.swift Generator */,
 				C11E27344DA8EFAF3B9DA985 /* Sources */,
 				B1203A0EDF46476385198E43 /* Frameworks */,
 				F0F63EAD04475AA810BFB263 /* Resources */,
 				7CDADB3C1E7C13300062C93E /* SwiftLint */,
-				804E9BF5C34CE55A9A6B60FC /* [CP] Embed Pods Frameworks */,
-				26DBD7FBDD09612791FDF19E /* [CP] Copy Pods Resources */,
 				7C017A581ED04B3D00EA5E07 /* Crashlytics */,
+				527D4802F2E355CFC9CF0615 /* [CP] Embed Pods Frameworks */,
+				8FE4C96884583AE9AD8980B1 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -385,7 +384,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 56D19100B6F80907A1B5EB11 /* Build configuration list for PBXProject "Simple Todo" */;
+			buildConfigurationList = 56D19100B6F80907A1B5EB11 /* Build configuration list for PBXProject "Listify" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -420,19 +419,19 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		26DBD7FBDD09612791FDF19E /* [CP] Copy Pods Resources */ = {
+		527D4802F2E355CFC9CF0615 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "[CP] Copy Pods Resources";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Listify/Pods-Listify-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Listify/Pods-Listify-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		7C017A581ED04B3D00EA5E07 /* Crashlytics */ = {
@@ -477,22 +476,22 @@
 			shellPath = /bin/sh;
 			shellScript = "if which swiftlint >/dev/null; then\nswiftlint\nelse\necho \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi";
 		};
-		804E9BF5C34CE55A9A6B60FC /* [CP] Embed Pods Frameworks */ = {
+		8FE4C96884583AE9AD8980B1 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "[CP] Embed Pods Frameworks";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Listify/Pods-Listify-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Listify/Pods-Listify-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		8C4C27798F400E6FB328EAAB /* [CP] Check Pods Manifest.lock */ = {
+		B1D230B513613A6308AC1FB1 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -615,7 +614,7 @@
 		};
 		B5370D1308DFC3EB80B0C165 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 94BCCDDED63620B01B1B2B2F /* Pods-Listify.debug.xcconfig */;
+			baseConfigurationReference = BBD58C428C6CF3ADD1C26F54 /* Pods-Listify.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -624,7 +623,7 @@
 				DEVELOPMENT_TEAM = 7G5K6NH4YV;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Simple Todo/Resources/Other-Sources/Info.plist";
+				INFOPLIST_FILE = "Listify/Resources/Other-Sources/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = YES;
@@ -633,7 +632,7 @@
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = iphoneos;
-				SWIFT_OBJC_BRIDGING_HEADER = "Simple Todo/Resources/Simple Todo-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "Listify/Resources/Listify-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -698,7 +697,7 @@
 		};
 		EEBD3DAA2B4219BE500D879B /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = CDE97D714DB6989D7DAE04E2 /* Pods-Listify.release.xcconfig */;
+			baseConfigurationReference = BF20F25202102E02B3480CE2 /* Pods-Listify.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -708,7 +707,7 @@
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
-				INFOPLIST_FILE = "Simple Todo/Resources/Other-Sources/Info.plist";
+				INFOPLIST_FILE = "Listify/Resources/Other-Sources/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = NO;
@@ -717,7 +716,7 @@
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "match AdHoc io.khoi.Listify";
 				SDKROOT = iphoneos;
-				SWIFT_OBJC_BRIDGING_HEADER = "Simple Todo/Resources/Simple Todo-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "Listify/Resources/Listify-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -726,7 +725,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		56D19100B6F80907A1B5EB11 /* Build configuration list for PBXProject "Simple Todo" */ = {
+		56D19100B6F80907A1B5EB11 /* Build configuration list for PBXProject "Listify" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				90EC29DF309C05167179B3BB /* Debug */,

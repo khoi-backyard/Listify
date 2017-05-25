@@ -17,7 +17,7 @@
                BlueprintIdentifier = "C6326674E7623DC7A34ACE2D"
                BuildableName = "Listify.app"
                BlueprintName = "Listify"
-               ReferencedContainer = "container:Simple Todo.xcodeproj">
+               ReferencedContainer = "container:Listify.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -35,7 +35,7 @@
             BlueprintIdentifier = "C6326674E7623DC7A34ACE2D"
             BuildableName = "Listify.app"
             BlueprintName = "Listify"
-            ReferencedContainer = "container:Simple Todo.xcodeproj">
+            ReferencedContainer = "container:Listify.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -58,7 +58,7 @@
             BlueprintIdentifier = "C6326674E7623DC7A34ACE2D"
             BuildableName = "Listify.app"
             BlueprintName = "Listify"
-            ReferencedContainer = "container:Simple Todo.xcodeproj">
+            ReferencedContainer = "container:Listify.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -77,7 +77,7 @@
             BlueprintIdentifier = "C6326674E7623DC7A34ACE2D"
             BuildableName = "Listify.app"
             BlueprintName = "Listify"
-            ReferencedContainer = "container:Simple Todo.xcodeproj">
+            ReferencedContainer = "container:Listify.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
