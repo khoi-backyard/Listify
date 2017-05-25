@@ -28,6 +28,7 @@ target 'Listify' do
     #Analytics & Deployment
     pod 'Fabric'
     pod 'Crashlytics'
+    pod 'Firebase/Core'
 end
 
 

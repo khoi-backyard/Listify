@@ -13,6 +13,7 @@ import NSObject_Rx
 import RealmSwift
 import Fabric
 import Crashlytics
+import Firebase
 
 let log = SwiftyBeaver.self
 
@@ -26,6 +27,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         //Configure some dependencies
         Fabric.with([Crashlytics.self])
+        FIRApp.configure()
 
         let console = ConsoleDestination()
         log.addDestination(console)

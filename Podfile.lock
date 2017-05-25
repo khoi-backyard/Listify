@@ -6,6 +6,9 @@ PODS:
     - Fabric (~> 1.6.3)
   - Fabric (1.6.11)
   - Fakery (2.0.0)
+  - Firebase/Core (3.17.0):
+    - FirebaseAnalytics (= 3.9.0)
+    - FirebaseCore (= 3.6.0)
   - FirebaseAnalytics (3.9.0):
     - FirebaseCore (~> 3.6)
     - FirebaseInstanceID (~> 1.0)
@@ -70,6 +73,7 @@ DEPENDENCIES:
   - Crashlytics
   - Fabric
   - Fakery
+  - Firebase/Core
   - Google/SignIn
   - MBProgressHUD (~> 1.0.0)
   - NSObject+Rx
@@ -88,6 +92,7 @@ SPEC CHECKSUMS:
   Crashlytics: 79e236942ca1e7fc641df1feb9a275360a78ab6a
   Fabric: 5911403591946b8228ab1c51d98f1d7137e863c6
   Fakery: 97b99c23937d2e025d9135c75e2b17351ccd5031
+  Firebase: 4b66b5b59c43edac745b87f0c87e42cdd0279c13
   FirebaseAnalytics: e5fe8486efc01bec33f6bf82e2fa9fce4b124052
   FirebaseCore: 9691ee2ade70c098d7cf92440f4303f16d83ca75
   FirebaseInstanceID: b9eedd6846fb5e1f0f7279e1deaa7a7e4cf8392e
@@ -110,6 +115,6 @@ SPEC CHECKSUMS:
   SnapKit: 12b24f569cb7c143acc9c22b9d91b23e7b1c84a2
   SwiftyBeaver: 90a39e3dc5136b7285f2e4c870b107e3933b8b84
 
-PODFILE CHECKSUM: 72ef83521f721a1d9ef209d558097d0d15383c75
+PODFILE CHECKSUM: 59e5724ae5ff8fe72b8069d459eb226e1ad77f9b
 
 COCOAPODS: 1.2.1
