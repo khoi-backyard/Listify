@@ -1,5 +1,5 @@
 included:
-  - Simple Todo
+  - Listify
 excluded:
   - UnitTests
 opt_in_rules:

@@ -318,8 +318,8 @@
 				419805E93077BCD27A8EDC51 /* Storyboards */,
 				7CB7A6141EA5C76C007CF930 /* GoogleService-Info.plist */,
 				6389A5B4C5BD8CDF73E74F2F /* Images.xcassets */,
-				4257E5BF74C9A468E9780CEE /* Settings.bundle */,
 				7CB7A6161EA5C7EC007CF930 /* Listify-Bridging-Header.h */,
+				4257E5BF74C9A468E9780CEE /* Settings.bundle */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
