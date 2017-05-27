@@ -27,8 +27,11 @@ class CreateTaskViewController: UIViewController, Bindable {
     func bindViewModel() {
         cancelBtn.rx.action = viewModel.onDismissed()
 
-        addTaskBtn.rx.bind(to: viewModel.onCreateTask) { [unowned self] _ in
-            self.taskTextField.text ?? ""
-        }
+        let actions = viewModel.onCreateTask
+
+        addTaskBtn.rx.tap
+            .withLatestFrom(taskTextField.rx.text.orEmpty)
+            .bind(to: actions.inputs)
+            .disposed(by: rx_disposeBag)
     }
 }
