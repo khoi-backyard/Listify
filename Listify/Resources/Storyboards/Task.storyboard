@@ -201,6 +201,10 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ebS-a5-dhH" userLabel="Task Input Wrapper ">
                                 <rect key="frame" x="0.0" y="20" width="375" height="80"/>
                                 <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Drm-ac-Yis">
+                                        <rect key="frame" x="337" y="25" width="30" height="30"/>
+                                        <state key="normal" image="microphone"/>
+                                    </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HXn-Uq-qbb">
                                         <rect key="frame" x="337" y="25" width="30" height="30"/>
                                         <constraints>
@@ -228,6 +232,8 @@
                                 <constraints>
                                     <constraint firstItem="AeL-7R-L5U" firstAttribute="leading" secondItem="ebS-a5-dhH" secondAttribute="leadingMargin" id="0Yw-S1-Vqd"/>
                                     <constraint firstAttribute="trailingMargin" secondItem="HXn-Uq-qbb" secondAttribute="trailing" id="3Ar-5F-Gg2"/>
+                                    <constraint firstItem="Drm-ac-Yis" firstAttribute="leading" secondItem="HXn-Uq-qbb" secondAttribute="leading" id="46l-5H-ez6"/>
+                                    <constraint firstItem="Drm-ac-Yis" firstAttribute="width" secondItem="HXn-Uq-qbb" secondAttribute="width" id="6uL-Xo-HAF"/>
                                     <constraint firstItem="HXn-Uq-qbb" firstAttribute="centerY" secondItem="ebS-a5-dhH" secondAttribute="centerY" id="9y9-rt-tga"/>
                                     <constraint firstAttribute="bottom" secondItem="6rW-Jo-Kz0" secondAttribute="bottom" id="E3l-FZ-mm2"/>
                                     <constraint firstItem="6rW-Jo-Kz0" firstAttribute="top" secondItem="ebS-a5-dhH" secondAttribute="top" id="L0x-XA-FQ0"/>
@@ -235,6 +241,8 @@
                                     <constraint firstAttribute="height" constant="80" id="Zuf-2u-CY0"/>
                                     <constraint firstItem="HXn-Uq-qbb" firstAttribute="leading" secondItem="6rW-Jo-Kz0" secondAttribute="trailing" constant="8" id="dbi-BN-dcp"/>
                                     <constraint firstItem="AeL-7R-L5U" firstAttribute="centerY" secondItem="ebS-a5-dhH" secondAttribute="centerY" id="mAh-Eq-Rot"/>
+                                    <constraint firstItem="Drm-ac-Yis" firstAttribute="height" secondItem="HXn-Uq-qbb" secondAttribute="height" id="ubd-Zv-kDc"/>
+                                    <constraint firstItem="Drm-ac-Yis" firstAttribute="top" secondItem="HXn-Uq-qbb" secondAttribute="top" id="wDv-nf-FUz"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OEC-Qb-pQv">
@@ -278,6 +286,7 @@
                         <outlet property="cancelBtn" destination="AeL-7R-L5U" id="2zR-HU-uFD"/>
                         <outlet property="defaultActionsTableView" destination="Pca-Ey-p0D" id="sNR-4l-s1S"/>
                         <outlet property="taskTextField" destination="6rW-Jo-Kz0" id="h54-5I-YDm"/>
+                        <outlet property="ttsBtn" destination="Drm-ac-Yis" id="zDt-jN-a7c"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wBs-VB-LzU" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -308,5 +317,6 @@
         <image name="checkmark-unchecked" width="147" height="147"/>
         <image name="close" width="52" height="52"/>
         <image name="list-icon" width="291" height="226"/>
+        <image name="microphone" width="32" height="58"/>
     </resources>
 </document>

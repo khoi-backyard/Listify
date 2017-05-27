@@ -17,6 +17,8 @@ class CreateTaskViewController: UIViewController, Bindable {
 
     @IBOutlet weak var cancelBtn: UIButton!
     @IBOutlet weak var addTaskBtn: UIButton!
+    @IBOutlet weak var ttsBtn: UIButton!
+
     @IBOutlet weak var defaultActionsTableView: UITableView!
     @IBOutlet weak var taskTextField: UITextField!
 
@@ -27,11 +29,31 @@ class CreateTaskViewController: UIViewController, Bindable {
     func bindViewModel() {
         cancelBtn.rx.action = viewModel.onDismissed()
 
-        let actions = viewModel.onCreateTask
+        let onCreateTaskAction = viewModel.onCreateTask
+        let onTaskTitleChanged = viewModel.onTaskTitleChanged
+
+        taskTextField.rx.text.orEmpty
+            .bind(to: onTaskTitleChanged.inputs)
+            .disposed(by: rx_disposeBag)
 
         addTaskBtn.rx.tap
             .withLatestFrom(taskTextField.rx.text.orEmpty)
-            .bind(to: actions.inputs)
+            .bind(to: onCreateTaskAction.inputs)
+            .disposed(by: rx_disposeBag)
+
+        let enabledCreateButton = onTaskTitleChanged
+            .elements
+            .startWith(false)
+            .share()
+
+        enabledCreateButton
+            .map { !$0 }
+            .bind(to: addTaskBtn.rx.isHidden)
+            .disposed(by: rx_disposeBag)
+
+        enabledCreateButton
+            .bind(to: ttsBtn.rx.isHidden)
             .disposed(by: rx_disposeBag)
     }
+
 }

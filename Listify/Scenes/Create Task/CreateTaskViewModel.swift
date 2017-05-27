@@ -10,6 +10,7 @@ import Foundation
 import RxSwift
 import RxDataSources
 import Action
+import RxCocoa
 
 struct CreateTaskViewModel {
     fileprivate let taskService: TaskServiceType
@@ -29,6 +30,12 @@ struct CreateTaskViewModel {
             return self.sceneCoordinator.pop(animated: true)
         }
     }
+
+    lazy var onTaskTitleChanged: Action<String, Bool> = { this in
+        return Action<String, Bool> { text in
+            return text.isEmpty ? .just(false) : .just (true)
+        }
+    }(self)
 
     lazy var onCreateTask: Action<String, Void> = { this in
         return Action<String, Void> { taskText in

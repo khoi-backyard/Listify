@@ -56,7 +56,7 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
   
-  /// This `R.image` struct is generated, and contains static references to 7 images.
+  /// This `R.image` struct is generated, and contains static references to 8 images.
   struct image {
     /// Image `add-button`.
     static let addButton = Rswift.ImageResource(bundle: R.hostingBundle, name: "add-button")
@@ -72,6 +72,8 @@ struct R: Rswift.Validatable {
     static let googleLogo = Rswift.ImageResource(bundle: R.hostingBundle, name: "google-logo")
     /// Image `list-icon`.
     static let listIcon = Rswift.ImageResource(bundle: R.hostingBundle, name: "list-icon")
+    /// Image `microphone`.
+    static let microphone = Rswift.ImageResource(bundle: R.hostingBundle, name: "microphone")
     
     /// `UIImage(named: "add-button", bundle: ..., traitCollection: ...)`
     static func addButton(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
@@ -106,6 +108,11 @@ struct R: Rswift.Validatable {
     /// `UIImage(named: "list-icon", bundle: ..., traitCollection: ...)`
     static func listIcon(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
       return UIKit.UIImage(resource: R.image.listIcon, compatibleWith: traitCollection)
+    }
+    
+    /// `UIImage(named: "microphone", bundle: ..., traitCollection: ...)`
+    static func microphone(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.microphone, compatibleWith: traitCollection)
     }
     
     fileprivate init() {}
@@ -235,6 +242,7 @@ struct _R: Rswift.Validatable {
       }
       
       static func validate() throws {
+        if UIKit.UIImage(named: "microphone") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'microphone' is used in storyboard 'Task', but couldn't be loaded.") }
         if UIKit.UIImage(named: "add-button") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'add-button' is used in storyboard 'Task', but couldn't be loaded.") }
         if UIKit.UIImage(named: "list-icon") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'list-icon' is used in storyboard 'Task', but couldn't be loaded.") }
         if UIKit.UIImage(named: "close") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'close' is used in storyboard 'Task', but couldn't be loaded.") }
