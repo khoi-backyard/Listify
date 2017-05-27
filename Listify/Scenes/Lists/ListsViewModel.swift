@@ -21,7 +21,6 @@ struct ListsViewModel {
     init(taskService: TaskServiceType, coordinator: SceneCoordinatorType) {
         self.taskService = taskService
         self.sceneCoordinator = coordinator
-
     }
 
     var sectionItems: Observable<[ListsSection]> {

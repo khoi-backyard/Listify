@@ -12,4 +12,5 @@ enum Scene {
     case authentication(AuthenticationViewModel)
     case taskList(ListsViewModel)
     case tasks(TasksViewModel)
+    case createTask(CreateTaskViewModel)
 }

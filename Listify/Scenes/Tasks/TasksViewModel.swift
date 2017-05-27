@@ -51,15 +51,13 @@ struct TasksViewModel {
                     }
                 })
                 .map { _ in }
-
         }
     }
 
     func onCreate() -> CocoaAction {
         return CocoaAction {
-            let task = Task()
-            task.text = "Some Task \(Date().timeIntervalSince1970)"
-            return self.taskService.create(task: task, in: self.taskList).map { _ in }
+            let createTaskViewModel = CreateTaskViewModel(taskService: self.taskService, coordinator: self.sceneCoordinator)
+            return self.sceneCoordinator.transition(to: Scene.createTask(createTaskViewModel), type: .modal)
         }
     }
 

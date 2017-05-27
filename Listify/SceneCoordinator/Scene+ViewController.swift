@@ -27,6 +27,10 @@ extension Scene {
             var tasksVC = R.storyboard.task.tasksViewController()!
             tasksVC.bindViewModel(to: viewModel)
             return tasksVC
+        case .createTask(let viewModel):
+            var createTaskVC = R.storyboard.task.createTaskViewController()!
+            createTaskVC.bindViewModel(to: viewModel)
+            return createTaskVC
         }
 
     }

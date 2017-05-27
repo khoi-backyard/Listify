@@ -17,7 +17,6 @@ class TasksViewController: UIViewController, Bindable {
     let dataSource = RxTableViewSectionedAnimatedDataSource<TaskSection>()
 
     @IBOutlet weak var tableView: UITableView!
-
     @IBOutlet weak var addTaskBtn: UIButton!
 
     override func viewDidLoad() {
@@ -41,10 +40,6 @@ class TasksViewController: UIViewController, Bindable {
         viewModel.taskList.rx.observe(String.self, "name")
             .bind(to: navigationItem.rx.title)
             .disposed(by: rx_disposeBag)
-
-    }
-
-    deinit {
 
     }
 
