@@ -33,12 +33,6 @@ platform :ios do
   lane :beta do
     cocoapods
 
-    commit_hash = last_git_commit[:abbreviated_commit_hash]
-    version_number = get_version_number(target: SCHEME_NAME)
-    version_metadata = "-live+#{git_branch}.#{commit_hash}"
-    version_number << version_metadata unless version_number.end_with?(version_metadata)
-
-    increment_version_number :version_number => version_number
     increment_build_number :build_number => number_of_commits
 
     match(
