@@ -18,6 +18,7 @@ class CreateTaskViewController: UIViewController, Bindable {
     @IBOutlet weak var cancelBtn: UIButton!
     @IBOutlet weak var addTaskBtn: UIButton!
     @IBOutlet weak var defaultActionsTableView: UITableView!
+    @IBOutlet weak var taskTextField: UITextField!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,5 +26,9 @@ class CreateTaskViewController: UIViewController, Bindable {
 
     func bindViewModel() {
         cancelBtn.rx.action = viewModel.onDismissed()
+
+        addTaskBtn.rx.bind(to: viewModel.onCreateTask) { [unowned self] _ in
+            self.taskTextField.text ?? ""
+        }
     }
 }

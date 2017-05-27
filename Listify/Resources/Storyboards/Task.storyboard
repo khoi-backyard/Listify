@@ -277,6 +277,7 @@
                         <outlet property="addTaskBtn" destination="HXn-Uq-qbb" id="me7-di-Q0a"/>
                         <outlet property="cancelBtn" destination="AeL-7R-L5U" id="2zR-HU-uFD"/>
                         <outlet property="defaultActionsTableView" destination="Pca-Ey-p0D" id="sNR-4l-s1S"/>
+                        <outlet property="taskTextField" destination="6rW-Jo-Kz0" id="h54-5I-YDm"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wBs-VB-LzU" userLabel="First Responder" sceneMemberID="firstResponder"/>

@@ -14,10 +14,14 @@ import Action
 struct CreateTaskViewModel {
     fileprivate let taskService: TaskServiceType
     fileprivate let sceneCoordinator: SceneCoordinatorType
+    fileprivate let taskList: TaskList
 
-    init(taskService: TaskServiceType, coordinator: SceneCoordinatorType) {
+    init(taskService: TaskServiceType,
+         coordinator: SceneCoordinatorType,
+         taskList: TaskList) {
         self.taskService = taskService
         self.sceneCoordinator = coordinator
+        self.taskList = taskList
     }
 
     func onDismissed() -> CocoaAction {
@@ -25,4 +29,13 @@ struct CreateTaskViewModel {
             return self.sceneCoordinator.pop(animated: true)
         }
     }
+
+    lazy var onCreateTask: Action<String, Void> = { this in
+        return Action<String, Void> { taskText in
+            return this.taskService.create(task: Task(value: ["text" : taskText]), in: this.taskList)
+                .map { _ in
+                    this.sceneCoordinator.pop(animated: true)
+                }
+        }
+    }(self)
 }

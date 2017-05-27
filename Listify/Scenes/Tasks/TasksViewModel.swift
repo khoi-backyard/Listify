@@ -56,7 +56,9 @@ struct TasksViewModel {
 
     func onCreate() -> CocoaAction {
         return CocoaAction {
-            let createTaskViewModel = CreateTaskViewModel(taskService: self.taskService, coordinator: self.sceneCoordinator)
+            let createTaskViewModel = CreateTaskViewModel(taskService: self.taskService,
+                                                          coordinator: self.sceneCoordinator,
+                                                          taskList: self.taskList)
             return self.sceneCoordinator.transition(to: Scene.createTask(createTaskViewModel), type: .modal)
         }
     }
