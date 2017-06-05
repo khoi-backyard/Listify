@@ -17,4 +17,5 @@ opt_in_rules:
   - switch_case_on_newline
   - conditional_returns_on_newline
   - switch_case_on_newline
+  - first_where
 line_length: 160

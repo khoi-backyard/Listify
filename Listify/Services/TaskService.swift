@@ -41,7 +41,7 @@ struct TaskService: TaskServiceType {
     }
 
     func tasks(in list: TaskList) -> Observable<Results<Task>> {
-        let result = withRealm("Getting Tasks") { (realm) -> Observable<Results<Task>> in
+        let result = withRealm("Getting Tasks") { (_) -> Observable<Results<Task>> in
             let tasks = list.items.sorted(byKeyPath: "dueDate", ascending: true)
             return Observable.collection(from: tasks)
         }

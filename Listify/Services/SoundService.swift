@@ -14,7 +14,7 @@ open class SoundService {
 
     open static let shared = SoundService()
 
-    open fileprivate(set) var sounds = [String:Sound]()
+    open fileprivate(set) var sounds = [String: Sound]()
 
     @discardableResult
     open func prepareSound(fileName: String) -> String? {

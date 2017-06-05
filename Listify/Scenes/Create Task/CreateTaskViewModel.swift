@@ -39,7 +39,7 @@ struct CreateTaskViewModel {
 
     lazy var onCreateTask: Action<String, Void> = { this in
         return Action<String, Void> { taskText in
-            return this.taskService.create(task: Task(value: ["text" : taskText]), in: this.taskList)
+            return this.taskService.create(task: Task(value: ["text": taskText]), in: this.taskList)
                 .map { _ in
                     this.sceneCoordinator.pop(animated: true)
                 }
