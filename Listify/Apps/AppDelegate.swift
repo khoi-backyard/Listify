@@ -43,15 +43,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let userService = UserService()
         let sceneCoordinator = SceneCoordinator(window: window!, userService: userService)
 
-        if let user = SyncUser.current,
-            let taskService = try? TaskService(syncConfig: SyncConfiguration(user: user,
-                                                                             realmURL: RealmConstants.syncServerURL)) {
-            let listViewModel = ListsViewModel(taskService: taskService, coordinator: sceneCoordinator)
-            sceneCoordinator.transition(to: Scene.taskList(listViewModel), type: .root)
-        } else {
-            sceneCoordinator.showAuthentication()
-        }
-
+        sceneCoordinator.showAuthentication()
         return true
     }
 

@@ -14,8 +14,9 @@ import Action
 
 class AuthenticationViewController: UIViewController, Bindable {
 
-  @IBOutlet weak var googleSignInBtn: UIButton!
+    @IBOutlet weak var googleSignInBtn: UIButton!
 
+    @IBOutlet weak var offlineBtn: UIButton!
     var viewModel: AuthenticationViewModel!
 
     override func viewDidLoad() {
@@ -25,6 +26,7 @@ class AuthenticationViewController: UIViewController, Bindable {
 
     func bindViewModel() {
         googleSignInBtn.rx.action = viewModel.onGoogleSignIn()
+        offlineBtn.rx.action = viewModel.onOfflineUsage()
     }
 
     override func viewWillAppear(_ animated: Bool) {

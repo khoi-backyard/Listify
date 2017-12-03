@@ -22,6 +22,16 @@ struct AuthenticationViewModel {
         self.sceneCoordinator = coordinator
         self.userService = userService
     }
+    
+    func onOfflineUsage() -> CocoaAction {
+        return CocoaAction { _ in
+            guard let taskService = try? TaskService(config: .defaultConfiguration) else {
+                return Observable<Void>.just(())
+            }
+            let taskListViewModel = ListsViewModel(taskService: taskService, coordinator: self.sceneCoordinator)
+            return self.sceneCoordinator.transition(to: Scene.taskList(taskListViewModel), type: .root)
+        }
+    }
 
     func onGoogleSignIn() -> CocoaAction {
         return CocoaAction { _ in
@@ -45,15 +55,16 @@ struct AuthenticationViewModel {
                 .flatMap { (result: SignInResult) -> Observable<Void> in
                     switch result {
                     case .success(let user):
-                        let taskService = try TaskService(syncConfig: SyncConfiguration(user: user, realmURL: RealmConstants.syncServerURL))
+                        let config = Realm.Configuration(syncConfiguration: SyncConfiguration(user: user, realmURL: RealmConstants.syncServerURL))
+                        let taskService = try TaskService(config: config)
                         let taskListViewModel = ListsViewModel(taskService: taskService, coordinator: self.sceneCoordinator)
                         return self.sceneCoordinator.transition(to: Scene.taskList(taskListViewModel), type: .root)
                     case .failure:
                         return Observable<Void>.just(())
                     }
                 }
-
                 .take(1)
+            
         }
     }
 }

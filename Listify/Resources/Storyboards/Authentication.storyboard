@@ -1,17 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="fvf-7B-prv">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="fvf-7B-prv">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--Authentication View Controller-->
         <scene sceneID="SV4-UD-wSV">
             <objects>
-                <viewController id="0LI-K4-qOi" customClass="AuthenticationViewController" customModule="Simple_Todo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="0LI-K4-qOi" customClass="AuthenticationViewController" customModule="Listify" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="fRj-ka-3UP"/>
                         <viewControllerLayoutGuide type="bottom" id="pZB-yn-A1U"/>
@@ -35,6 +36,11 @@
                                 </constraints>
                                 <state key="normal" title="Sign In With Google"/>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P3I-Cs-Opu">
+                                <rect key="frame" x="0.0" y="408" width="375" height="44"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" title="Use the app offline"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.93725490196078431" green="0.95294117647058818" blue="0.96470588235294119" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -42,13 +48,18 @@
                             <constraint firstAttribute="trailing" secondItem="Sw8-ch-7Eh" secondAttribute="trailing" id="6HT-Fg-aVJ"/>
                             <constraint firstItem="7sp-Fx-WPi" firstAttribute="top" secondItem="fRj-ka-3UP" secondAttribute="bottom" constant="64" id="Ehg-lM-nV2"/>
                             <constraint firstItem="7sp-Fx-WPi" firstAttribute="centerX" secondItem="vz1-sO-MG0" secondAttribute="centerX" id="H3c-VX-wKf"/>
+                            <constraint firstItem="P3I-Cs-Opu" firstAttribute="trailing" secondItem="Sw8-ch-7Eh" secondAttribute="trailing" id="Hbe-Vh-upD"/>
                             <constraint firstItem="Sw8-ch-7Eh" firstAttribute="top" secondItem="7sp-Fx-WPi" secondAttribute="bottom" constant="64" id="Phu-3d-ChV"/>
+                            <constraint firstItem="P3I-Cs-Opu" firstAttribute="height" secondItem="Sw8-ch-7Eh" secondAttribute="height" id="ZFO-BC-ym8"/>
+                            <constraint firstItem="P3I-Cs-Opu" firstAttribute="top" secondItem="Sw8-ch-7Eh" secondAttribute="bottom" constant="16" id="do3-OA-s08"/>
+                            <constraint firstItem="P3I-Cs-Opu" firstAttribute="leading" secondItem="Sw8-ch-7Eh" secondAttribute="leading" id="hNK-OP-isY"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="IqE-n3-La0"/>
                     <nil key="simulatedTopBarMetrics"/>
                     <connections>
                         <outlet property="googleSignInBtn" destination="Sw8-ch-7Eh" id="fxZ-5H-ALi"/>
+                        <outlet property="offlineBtn" destination="P3I-Cs-Opu" id="VRb-Dq-Yhy"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3cr-6R-8AW" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -61,7 +72,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="fvf-7B-prv" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="xhZ-ai-950">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>

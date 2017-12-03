@@ -12,11 +12,9 @@ import RealmSwift
 import RxRealm
 
 struct TaskService: TaskServiceType {
-    private let config: Realm.Configuration
     private let realm: Realm
 
-    init(syncConfig: SyncConfiguration) throws {
-        config = Realm.Configuration(syncConfiguration: syncConfig)
+    init(config: Realm.Configuration) throws {
         realm = try Realm(configuration: config)
     }
 
