@@ -29,12 +29,14 @@ target 'Listify' do
     pod 'Fabric'
     pod 'Crashlytics'
     pod 'Firebase/Core'
+    
+    target 'ListifyTests' do
+        pod 'RxSwift', '~> 3.0'
+        pod 'RxTest'
+    end
 end
 
-target 'ListifyTests' do
-    pod 'RxSwift', '~> 3.0'
-    pod 'RxTest'
-end
+
 
 
 # Copy acknowledgements to the Settings.bundle

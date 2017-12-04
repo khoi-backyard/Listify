@@ -19,7 +19,12 @@ enum LoginError: Error {
 
 typealias SignInResult = Result<SyncUser, LoginError>
 
-struct UserService {
+protocol UserServiceType {
+    func logIn(with syncCredentials: SyncCredentials, server: URL) -> Observable<SignInResult>
+    func logOut()
+}
+
+struct UserService: UserServiceType {
     func logIn(with syncCredentials: SyncCredentials, server: URL = RealmConstants.syncAuthURL) -> Observable<SignInResult> {
         return Observable.create { (observer) -> Disposable in
             SyncUser.logIn(with: syncCredentials, server: server, onCompletion: { (user, error) in

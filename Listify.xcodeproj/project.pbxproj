@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2D935D421FD51E0C00D09491 /* ListifyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D935D411FD51E0C00D09491 /* ListifyTests.swift */; };
 		412C7C1786E0D7538E74FBAA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 647F8725AC73C9C3A3979F62 /* AppDelegate.swift */; };
 		5070912733BC0C08F49B6905 /* Pods_Listify.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55C886A6770C4AFBDD7A0FF3 /* Pods_Listify.framework */; };
 		727966BFDEF3124DAE9381C1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 865485C93876D8207D8FE49C /* Foundation.framework */; };
@@ -31,6 +32,9 @@
 		7C4F65271E8CE021006F4F1F /* AppConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C4F65261E8CE021006F4F1F /* AppConstant.swift */; };
 		7C86E5391E8270DD00E7A484 /* RealmConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C86E5381E8270DD00E7A484 /* RealmConstants.swift */; };
 		7CB7A6151EA5C76C007CF930 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7CB7A6141EA5C76C007CF930 /* GoogleService-Info.plist */; };
+		7CC9CC1D1FD51EC300E11AA5 /* TaskServiceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CC9CC1C1FD51EC300E11AA5 /* TaskServiceMock.swift */; };
+		7CC9CC211FD524FF00E11AA5 /* TasksViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CC9CC201FD524FF00E11AA5 /* TasksViewModelTests.swift */; };
+		7CC9CC251FD526FD00E11AA5 /* CoordinatorMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CC9CC241FD526FD00E11AA5 /* CoordinatorMock.swift */; };
 		7CD27A691EA4C83B00B2A4EA /* Authentication.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7CD27A681EA4C83B00B2A4EA /* Authentication.storyboard */; };
 		7CD27A6C1EA4C87A00B2A4EA /* Scene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CD27A6B1EA4C87A00B2A4EA /* Scene.swift */; };
 		7CD27A6E1EA4C8B700B2A4EA /* AuthenticationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CD27A6D1EA4C8B700B2A4EA /* AuthenticationViewModel.swift */; };
@@ -50,14 +54,31 @@
 		7CFB09D41ED9521D008D890E /* CreateTaskActionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CFB09D31ED9521D008D890E /* CreateTaskActionTableViewCell.swift */; };
 		891B0A6B77259CBADAAF2F71 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 4257E5BF74C9A468E9780CEE /* Settings.bundle */; };
 		9FBE8EA893A9AAC6F142D6A9 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6389A5B4C5BD8CDF73E74F2F /* Images.xcassets */; };
+		ADAEDFEC954225A156F7094A /* Pods_ListifyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59462F3CE0F669A5EF119B89 /* Pods_ListifyTests.framework */; };
+		BA544A89DE967232A96C292A /* Pods_Listify_ListifyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F1DB87AA8E01AADEF630A47 /* Pods_Listify_ListifyTests.framework */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2D935D441FD51E0C00D09491 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = ED4F04C3F60A4FDD8A332B55 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C6326674E7623DC7A34ACE2D;
+			remoteInfo = Listify;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		1B7500DBEC8AC66373E3CE70 /* LaunchScreen.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; path = LaunchScreen.xib; sourceTree = "<group>"; };
+		2D935D3F1FD51E0C00D09491 /* ListifyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ListifyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2D935D411FD51E0C00D09491 /* ListifyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListifyTests.swift; sourceTree = "<group>"; };
+		2D935D431FD51E0C00D09491 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4257E5BF74C9A468E9780CEE /* Settings.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		45A4F37304134740156BC411 /* Listify.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Listify.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		55C886A6770C4AFBDD7A0FF3 /* Pods_Listify.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Listify.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		59462F3CE0F669A5EF119B89 /* Pods_ListifyTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ListifyTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6389A5B4C5BD8CDF73E74F2F /* Images.xcassets */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		63AD450B036D751913879909 /* Pods-Listify-ListifyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Listify-ListifyTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Listify-ListifyTests/Pods-Listify-ListifyTests.release.xcconfig"; sourceTree = "<group>"; };
 		647F8725AC73C9C3A3979F62 /* AppDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7C016C491EAE060E00C638D2 /* TaskService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskService.swift; sourceTree = "<group>"; };
 		7C016C4B1EAE0C2D00C638D2 /* TaskServiceType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskServiceType.swift; sourceTree = "<group>"; };
@@ -80,6 +101,9 @@
 		7C86E5381E8270DD00E7A484 /* RealmConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmConstants.swift; sourceTree = "<group>"; };
 		7CB7A6141EA5C76C007CF930 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		7CB7A6161EA5C7EC007CF930 /* Listify-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Listify-Bridging-Header.h"; sourceTree = "<group>"; };
+		7CC9CC1C1FD51EC300E11AA5 /* TaskServiceMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskServiceMock.swift; sourceTree = "<group>"; };
+		7CC9CC201FD524FF00E11AA5 /* TasksViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksViewModelTests.swift; sourceTree = "<group>"; };
+		7CC9CC241FD526FD00E11AA5 /* CoordinatorMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorMock.swift; sourceTree = "<group>"; };
 		7CD27A681EA4C83B00B2A4EA /* Authentication.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Authentication.storyboard; sourceTree = "<group>"; };
 		7CD27A6B1EA4C87A00B2A4EA /* Scene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Scene.swift; sourceTree = "<group>"; };
 		7CD27A6D1EA4C8B700B2A4EA /* AuthenticationViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticationViewModel.swift; sourceTree = "<group>"; };
@@ -97,13 +121,26 @@
 		7CFB09CF1ED93C04008D890E /* CreateTaskViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateTaskViewController.swift; sourceTree = "<group>"; };
 		7CFB09D11ED93C60008D890E /* CreateTaskViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateTaskViewModel.swift; sourceTree = "<group>"; };
 		7CFB09D31ED9521D008D890E /* CreateTaskActionTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateTaskActionTableViewCell.swift; sourceTree = "<group>"; };
+		7F1DB87AA8E01AADEF630A47 /* Pods_Listify_ListifyTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Listify_ListifyTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		865485C93876D8207D8FE49C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		8DE52D7F270BC85E9B756BDE /* Pods-ListifyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ListifyTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ListifyTests/Pods-ListifyTests.release.xcconfig"; sourceTree = "<group>"; };
 		BBD58C428C6CF3ADD1C26F54 /* Pods-Listify.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Listify.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Listify/Pods-Listify.debug.xcconfig"; sourceTree = "<group>"; };
 		BF20F25202102E02B3480CE2 /* Pods-Listify.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Listify.release.xcconfig"; path = "Pods/Target Support Files/Pods-Listify/Pods-Listify.release.xcconfig"; sourceTree = "<group>"; };
+		C239F9BD1CF27C8E26A65BA5 /* Pods-Listify-ListifyTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Listify-ListifyTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Listify-ListifyTests/Pods-Listify-ListifyTests.debug.xcconfig"; sourceTree = "<group>"; };
+		F1EE1A1FF19474B81F4A7551 /* Pods-ListifyTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ListifyTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ListifyTests/Pods-ListifyTests.debug.xcconfig"; sourceTree = "<group>"; };
 		F800C0519DEF5B16C5F1ECFF /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		2D935D3C1FD51E0C00D09491 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ADAEDFEC954225A156F7094A /* Pods_ListifyTests.framework in Frameworks */,
+				BA544A89DE967232A96C292A /* Pods_Listify_ListifyTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		B1203A0EDF46476385198E43 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -142,6 +179,18 @@
 			path = Protocols;
 			sourceTree = "<group>";
 		};
+		2D935D401FD51E0C00D09491 /* ListifyTests */ = {
+			isa = PBXGroup;
+			children = (
+				2D935D411FD51E0C00D09491 /* ListifyTests.swift */,
+				2D935D431FD51E0C00D09491 /* Info.plist */,
+				7CC9CC1C1FD51EC300E11AA5 /* TaskServiceMock.swift */,
+				7CC9CC201FD524FF00E11AA5 /* TasksViewModelTests.swift */,
+				7CC9CC241FD526FD00E11AA5 /* CoordinatorMock.swift */,
+			);
+			path = ListifyTests;
+			sourceTree = "<group>";
+		};
 		419805E93077BCD27A8EDC51 /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
@@ -167,6 +216,8 @@
 			children = (
 				AADADE3C670D141A3F400FC8 /* iOS */,
 				55C886A6770C4AFBDD7A0FF3 /* Pods_Listify.framework */,
+				59462F3CE0F669A5EF119B89 /* Pods_ListifyTests.framework */,
+				7F1DB87AA8E01AADEF630A47 /* Pods_Listify_ListifyTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -174,6 +225,7 @@
 		73FE48256FA9FA41AD849BEB = {
 			isa = PBXGroup;
 			children = (
+				2D935D401FD51E0C00D09491 /* ListifyTests */,
 				5597AAAFA6B5C575AC022FD5 /* Frameworks */,
 				220175C00881D15DDC20ED03 /* Listify */,
 				7C6E192879B463CEBE001D57 /* Pods */,
@@ -219,6 +271,10 @@
 			children = (
 				BF20F25202102E02B3480CE2 /* Pods-Listify.release.xcconfig */,
 				BBD58C428C6CF3ADD1C26F54 /* Pods-Listify.debug.xcconfig */,
+				F1EE1A1FF19474B81F4A7551 /* Pods-ListifyTests.debug.xcconfig */,
+				8DE52D7F270BC85E9B756BDE /* Pods-ListifyTests.release.xcconfig */,
+				C239F9BD1CF27C8E26A65BA5 /* Pods-Listify-ListifyTests.debug.xcconfig */,
+				63AD450B036D751913879909 /* Pods-Listify-ListifyTests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -297,6 +353,7 @@
 			isa = PBXGroup;
 			children = (
 				45A4F37304134740156BC411 /* Listify.app */,
+				2D935D3F1FD51E0C00D09491 /* ListifyTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -352,6 +409,27 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		2D935D3E1FD51E0C00D09491 /* ListifyTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2D935D481FD51E0C00D09491 /* Build configuration list for PBXNativeTarget "ListifyTests" */;
+			buildPhases = (
+				CBB2D2736B31A8C73D4D1153 /* [CP] Check Pods Manifest.lock */,
+				2D935D3B1FD51E0C00D09491 /* Sources */,
+				2D935D3C1FD51E0C00D09491 /* Frameworks */,
+				2D935D3D1FD51E0C00D09491 /* Resources */,
+				58DE21C227EEF1768702BB99 /* [CP] Embed Pods Frameworks */,
+				72B6607131D4E27D86833D09 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2D935D451FD51E0C00D09491 /* PBXTargetDependency */,
+			);
+			name = ListifyTests;
+			productName = ListifyTests;
+			productReference = 2D935D3F1FD51E0C00D09491 /* ListifyTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		C6326674E7623DC7A34ACE2D /* Listify */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5AE1C82DBECF995BEF4A9AF4 /* Build configuration list for PBXNativeTarget "Listify" */;
@@ -382,10 +460,16 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = "";
-				LastSwiftUpdateCheck = 0910;
+				LastSwiftUpdateCheck = 0830;
 				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = khoi.io;
 				TargetAttributes = {
+					2D935D3E1FD51E0C00D09491 = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = 37TYWLGRXS;
+						ProvisioningStyle = Automatic;
+						TestTargetID = C6326674E7623DC7A34ACE2D;
+					};
 					C6326674E7623DC7A34ACE2D = {
 						DevelopmentTeam = 7G5K6NH4YV;
 						LastSwiftMigration = 0830;
@@ -406,11 +490,19 @@
 			projectRoot = "";
 			targets = (
 				C6326674E7623DC7A34ACE2D /* Listify */,
+				2D935D3E1FD51E0C00D09491 /* ListifyTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		2D935D3D1FD51E0C00D09491 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F0F63EAD04475AA810BFB263 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -476,6 +568,76 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Listify/Pods-Listify-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		58DE21C227EEF1768702BB99 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Listify-ListifyTests/Pods-Listify-ListifyTests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Action/Action.framework",
+				"${BUILT_PRODUCTS_DIR}/Fakery/Fakery.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMOAuth2/GTMOAuth2.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
+				"${BUILT_PRODUCTS_DIR}/NSObject+Rx/NSObject_Rx.framework",
+				"${BUILT_PRODUCTS_DIR}/R.swift.Library/Rswift.framework",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
+				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxDataSources/RxDataSources.framework",
+				"${BUILT_PRODUCTS_DIR}/RxRealm/RxRealm.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyBeaver/SwiftyBeaver.framework",
+				"${BUILT_PRODUCTS_DIR}/RxTest/RxTest.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Action.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Fakery.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMOAuth2.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NSObject_Rx.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Rswift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxDataSources.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxRealm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyBeaver.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxTest.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Listify-ListifyTests/Pods-Listify-ListifyTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		72B6607131D4E27D86833D09 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Listify-ListifyTests/Pods-Listify-ListifyTests-resources.sh",
+				"${PODS_ROOT}/GoogleSignIn/Resources/GoogleSignIn.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Listify-ListifyTests/Pods-Listify-ListifyTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		7C017A581ED04B3D00EA5E07 /* Crashlytics */ = {
@@ -556,9 +718,38 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		CBB2D2736B31A8C73D4D1153 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Listify-ListifyTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		2D935D3B1FD51E0C00D09491 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7CC9CC1D1FD51EC300E11AA5 /* TaskServiceMock.swift in Sources */,
+				2D935D421FD51E0C00D09491 /* ListifyTests.swift in Sources */,
+				7CC9CC251FD526FD00E11AA5 /* CoordinatorMock.swift in Sources */,
+				7CC9CC211FD524FF00E11AA5 /* TasksViewModelTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C11E27344DA8EFAF3B9DA985 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -602,7 +793,92 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		2D935D451FD51E0C00D09491 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C6326674E7623DC7A34ACE2D /* Listify */;
+			targetProxy = 2D935D441FD51E0C00D09491 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		2D935D461FD51E0C00D09491 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C239F9BD1CF27C8E26A65BA5 /* Pods-Listify-ListifyTests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = 37TYWLGRXS;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_ROOT}/Headers/Public\"",
+					"\"${PODS_ROOT}/Headers/Public/Crashlytics\"",
+					"\"${PODS_ROOT}/Headers/Public/Fabric\"",
+					"\"${PODS_ROOT}/Headers/Public/Firebase\"/**",
+					"\"${PODS_ROOT}/Headers/Public/FirebaseAnalytics\"/**",
+					"\"${PODS_ROOT}/Headers/Public/FirebaseCore\"/**",
+					"\"${PODS_ROOT}/Headers/Public/FirebaseInstanceID\"/**",
+					"\"${PODS_ROOT}/Headers/Public/Google\"/**",
+					"\"${PODS_ROOT}/Headers/Public/GoogleSignIn\"/**",
+					"\"${PODS_ROOT}/Headers/Public/R.swift\"",
+				);
+				INFOPLIST_FILE = ListifyTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = io.khoi.ListifyTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Listify.app/Listify";
+			};
+			name = Debug;
+		};
+		2D935D471FD51E0C00D09491 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 63AD450B036D751913879909 /* Pods-Listify-ListifyTests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = 37TYWLGRXS;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_ROOT}/Headers/Public\"",
+					"\"${PODS_ROOT}/Headers/Public/Crashlytics\"",
+					"\"${PODS_ROOT}/Headers/Public/Fabric\"",
+					"\"${PODS_ROOT}/Headers/Public/Firebase\"/**",
+					"\"${PODS_ROOT}/Headers/Public/FirebaseAnalytics\"/**",
+					"\"${PODS_ROOT}/Headers/Public/FirebaseCore\"/**",
+					"\"${PODS_ROOT}/Headers/Public/FirebaseInstanceID\"/**",
+					"\"${PODS_ROOT}/Headers/Public/Google\"/**",
+					"\"${PODS_ROOT}/Headers/Public/GoogleSignIn\"/**",
+					"\"${PODS_ROOT}/Headers/Public/R.swift\"",
+				);
+				INFOPLIST_FILE = ListifyTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = io.khoi.ListifyTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Listify.app/Listify";
+			};
+			name = Release;
+		};
 		90EC29DF309C05167179B3BB /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -778,6 +1054,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		2D935D481FD51E0C00D09491 /* Build configuration list for PBXNativeTarget "ListifyTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2D935D461FD51E0C00D09491 /* Debug */,
+				2D935D471FD51E0C00D09491 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		56D19100B6F80907A1B5EB11 /* Build configuration list for PBXProject "Listify" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

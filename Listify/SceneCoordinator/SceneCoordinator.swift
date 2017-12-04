@@ -14,9 +14,9 @@ class SceneCoordinator: SceneCoordinatorType {
 
     private var window: UIWindow
     private var currentViewController: UIViewController?
-    var userService: UserService
+    var userService: UserService?
 
-    required init(window: UIWindow, userService: UserService) {
+    required init(window: UIWindow, userService: UserService?) {
         self.window = window
         currentViewController = window.rootViewController
         self.userService = userService
@@ -32,7 +32,7 @@ class SceneCoordinator: SceneCoordinatorType {
 
     @discardableResult
     func showAuthentication() -> Observable<Void> {
-        let authenticationViewModel = AuthenticationViewModel(coordinator: self, userService: userService)
+        let authenticationViewModel = AuthenticationViewModel(coordinator: self, userService: userService!)
         let authenticationScene = Scene.authentication(authenticationViewModel)
         return transition(to: authenticationScene, type: .root)
     }
