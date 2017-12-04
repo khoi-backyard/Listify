@@ -31,6 +31,11 @@ target 'Listify' do
     pod 'Firebase/Core'
 end
 
+target 'ListifyTests' do
+    pod 'RxSwift', '~> 3.0'
+    pod 'RxTest'
+end
+
 
 # Copy acknowledgements to the Settings.bundle
 post_install do | installer |

@@ -14,6 +14,8 @@ import RealmSwift
 import Fabric
 import Crashlytics
 import Firebase
+import Google
+import GoogleSignIn
 
 let log = SwiftyBeaver.self
 

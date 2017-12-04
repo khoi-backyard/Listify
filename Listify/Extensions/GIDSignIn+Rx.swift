@@ -10,6 +10,7 @@ import UIKit
 import RxSwift
 import RxCocoa
 import Result
+import GoogleSignIn
 
 public typealias GIDSignInResult = Result<GIDGoogleUser, NSError>
 

@@ -11,6 +11,7 @@ import RxSwift
 import RxCocoa
 import RealmSwift
 import Action
+import GoogleSignIn
 
 struct AuthenticationViewModel {
 
